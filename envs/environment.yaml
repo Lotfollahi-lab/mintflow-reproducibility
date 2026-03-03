@@ -1,0 +1,21 @@
+name: mintflow-reproducibility
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - python>=3.10
+  - pip
+  - scanpy
+  - anndata
+  - squidpy
+  - pandas
+  - numpy
+  - matplotlib
+  - seaborn
+  - scipy
+  - pip:
+    - drug2cell
+    - blitzgsea
+    - gseapy
+    - glasbey
