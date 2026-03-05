@@ -1,6 +1,6 @@
-# Linear NCEM Reproducibility (Combined Datasets)
+# Linear NCEM Reproducibility
 
-This folder contains reproducible scripts to run **linear NCEM** for spatial domain recovery on combined datasets.
+This folder contains reproducible scripts to run **linear NCEM** for spatial domain recovery on the provided full dataset package.
 
 ## Files
 
