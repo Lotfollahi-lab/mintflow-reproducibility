@@ -16,25 +16,34 @@ The patched code in `local_stagate/STAGATE_pyG/utils.py` removes identity/self-l
 
 ## Environment
 
-Runner uses:
+Create a local environment in this folder:
 
-- `/lustre/scratch126/cellgen/lotfollahi/dv8/mint_flow_bench/STAGATE/.venv_stagate/bin/python`
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.stagate-only.txt
+# if needed for exact reproducibility, use:
+# pip install -r requirements.stagate-venv.txt
+```
 
 ## Inputs
 
-Default datasets are explicit paths:
+Use either:
 
-- `/nfs/team361/aa36/OnGit/inflow-reproducibility/Analysis/18_Melanoma_Jan20Runs/NonGit/Data/preprocBy_nb1_preprocessing_V2.h5ad`
-- `/lustre/scratch126/cellgen/lotfollahi/dv8/mint_flow_bench/reconstructed_h5ad/xenium_old_beacon/combined.h5ad`
-- `/lustre/scratch126/cellgen/lotfollahi/dv8/mint_flow_bench/reconstructed_h5ad/xenium_old_kidney/combined.h5ad`
+- explicit `.h5ad` paths via `--datasets`, or
+- dataset names with `--root` where each dataset has `combined.h5ad`.
+
+Suggested layout for named datasets:
+
+- `<RECON_ROOT>/<dataset>/combined.h5ad`
 
 Each input must include `obsm["spatial"]`.
 
 ## Outputs
 
-Default output root:
+By default, outputs are written under:
 
-- `/lustre/scratch126/cellgen/lotfollahi/dv8/mint_flow_bench/STAGATE/without_centre/results`
+- `<OUTPUT_ROOT>/<dataset>/`
 
 Per dataset:
 
@@ -44,13 +53,17 @@ Per dataset:
 ## Run locally
 
 ```bash
+source .venv/bin/activate
 python run_stagate_combined_node_removal.py
 ```
 
 Optional override:
 
 ```bash
-python run_stagate_combined_node_removal.py --datasets /path/to/combined.h5ad --device cuda
+python run_stagate_combined_node_removal.py \
+  --datasets /path/to/sample1.h5ad /path/to/sample2.h5ad \
+  --out-root /path/to/stagate_node_removal_results \
+  --device cuda
 ```
 
 ## Run with LSF
@@ -59,3 +72,4 @@ python run_stagate_combined_node_removal.py --datasets /path/to/combined.h5ad --
 bsub < bsub_stagate_node_removal.lsf
 ```
 
+Before submitting, edit `bsub_stagate_node_removal.lsf` and set `PY` to your environment's Python path.

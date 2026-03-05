@@ -11,31 +11,31 @@ This folder reproduces the **original STAGATE** benchmark runs (center/self cont
 
 ## Environment
 
-Runner uses:
+Create a local environment in this folder:
 
-- `/lustre/scratch126/cellgen/lotfollahi/dv8/mint_flow_bench/STAGATE/.venv_stagate/bin/python`
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.stagate-only.txt
+# if needed for exact reproducibility, use:
+# pip install -r requirements.stagate-venv.txt
+```
 
 ## Inputs
 
-Default root:
+Use dataset names with `--root` and this layout:
 
-- `/lustre/scratch126/cellgen/lotfollahi/dv8/mint_flow_bench/reconstructed_h5ad`
+- `<RECON_ROOT>/<dataset>/combined.h5ad`
 
-Default datasets:
+or pass explicit `.h5ad` paths with `--datasets`.
 
-- `slideseq_kidney`
-- `visiumhd_crc`
-- `xenium_new_psoriasis`
-- `xenium_old_beacon`
-- `xenium_old_kidney`
-
-Each dataset expects `<dataset>/combined.h5ad` with `obsm["spatial"]`.
+Each input must include `obsm["spatial"]`.
 
 ## Outputs
 
-Default output root:
+By default, outputs are written under:
 
-- `/lustre/scratch126/cellgen/lotfollahi/dv8/mint_flow_bench/STAGATE/results`
+- `<OUTPUT_ROOT>/<dataset>/`
 
 Per dataset:
 
@@ -45,13 +45,19 @@ Per dataset:
 ## Run locally
 
 ```bash
+source .venv/bin/activate
 python run_stagate_combined.py
 ```
 
 Optional:
 
 ```bash
-python run_stagate_combined.py --datasets visiumhd_crc xenium_old_beacon --device cuda --rad-cutoff 40
+python run_stagate_combined.py \
+  --datasets visiumhd_crc xenium_old_beacon \
+  --root /path/to/reconstructed_h5ad \
+  --out-root /path/to/stagate_results \
+  --device cuda \
+  --rad-cutoff 40
 ```
 
 ## Run with LSF
@@ -60,3 +66,4 @@ python run_stagate_combined.py --datasets visiumhd_crc xenium_old_beacon --devic
 bsub < bsub_stagate_combined.lsf
 ```
 
+Before submitting, edit `bsub_stagate_combined.lsf` and set `PY` to your environment's Python path.
