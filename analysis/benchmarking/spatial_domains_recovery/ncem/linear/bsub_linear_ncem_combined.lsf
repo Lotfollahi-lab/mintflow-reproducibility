@@ -1,0 +1,20 @@
+#!/bin/bash
+#BSUB -q training-parallel
+#BSUB -G team361
+#BSUB -U mlteam_burnin_beta
+#BSUB -J ncem_linear_combined
+#BSUB -cwd /lustre/scratch126/cellgen/lotfollahi/dv8/mintflow-reproducibility/analysis/benchmarking/spatial_domains_recovery/ncem/linear
+#BSUB -o logs/ncem_linear_combined_%J.out
+#BSUB -e logs/ncem_linear_combined_%J.err
+#BSUB -M 220000
+#BSUB -R "select[mem>220000] rusage[mem=220000]"
+
+set -euo pipefail
+mkdir -p logs
+
+# Update env path for your system.
+source /lustre/scratch126/cellgen/lotfollahi/dv8/mint_flow_bench/NCEM/.ncem-venv/bin/activate
+
+python run_linear_ncem_combined.py \
+  --in_root /lustre/scratch126/cellgen/lotfollahi/dv8/mint_flow_bench/reconstructed_h5ad \
+  --out_root /lustre/scratch126/cellgen/lotfollahi/dv8/mint_flow_bench/NCEM/linear_results_parallel
