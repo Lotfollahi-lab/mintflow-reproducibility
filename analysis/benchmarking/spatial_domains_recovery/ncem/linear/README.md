@@ -6,6 +6,15 @@ This folder contains reproducible scripts to run **linear NCEM** for spatial dom
 
 - `run_linear_ncem_combined.py`: main runner.
 - `bsub_linear_ncem_combined.lsf`: LSF job template.
+- `requirements.ncem-venv.txt`: full `pip freeze` from the NCEM environment used.
+- `requirements.ncem-only.txt`: minimal NCEM-focused package list.
+
+## Environment
+
+Keep benchmark environments scoped per method folder:
+
+- NCEM env files stay in `analysis/benchmarking/spatial_domains_recovery/ncem/linear/`.
+- Other benchmark env files should be saved in their own benchmark folders.
 
 ## Inputs
 

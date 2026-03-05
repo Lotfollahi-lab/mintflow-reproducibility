@@ -1,0 +1,17 @@
+anndata==0.10.9
+batchglm==0.7.4
+diffxpy==0.7.4
+h5py==3.14.0
+igraph==0.9.11
+leidenalg==0.8.10
+louvain==0.7.2
+ncem==0.1.5
+numba==0.60.0
+numpy==1.24.4
+omnipath==1.0.12
+pandas==2.3.3
+patsy==0.5.6
+scanpy==1.9.6
+scikit-learn==1.6.1
+scipy==1.9.1
+statsmodels==0.14.6
