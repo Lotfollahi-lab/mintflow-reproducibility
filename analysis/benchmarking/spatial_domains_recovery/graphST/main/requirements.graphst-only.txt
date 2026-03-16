@@ -1,0 +1,7 @@
+anndata==0.8.0
+GraphST==1.1.1
+numpy==1.22.3
+pandas==1.4.2
+scanpy==1.9.1
+scikit-learn==1.1.1
+torch==1.8.0

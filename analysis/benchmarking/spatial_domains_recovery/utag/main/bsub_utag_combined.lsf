@@ -1,0 +1,21 @@
+#!/bin/bash
+#BSUB -q training-parallel
+#BSUB -gpu "mode=exclusive_process:num=1:block=yes"
+#BSUB -G team361
+#BSUB -U mlteam_burnin_beta
+#BSUB -cwd /lustre/scratch126/cellgen/lotfollahi/dv8/mint_flow_bench/mintflow-reproducibility/analysis/benchmarking/spatial_domains_recovery/utag/main
+#BSUB -o logs/UTAG_main_%J.out
+#BSUB -e logs/UTAG_main_%J.err
+#BSUB -M 180000
+#BSUB -R "select[mem>180000] rusage[mem=180000]"
+#BSUB -J UTAG_main
+
+set -euo pipefail
+mkdir -p logs
+
+export PYTHONUNBUFFERED=1
+PY="/software/cellgen/team361/ms83/envs/utag-env/bin/python"
+RUNNER="/lustre/scratch126/cellgen/lotfollahi/dv8/mint_flow_bench/mintflow-reproducibility/analysis/benchmarking/spatial_domains_recovery/utag/main/run_utag_combined.py"
+
+$PY "$RUNNER"
+

@@ -1,0 +1,25 @@
+#!/bin/bash
+#BSUB -q training-parallel
+#BSUB -gpu "mode=exclusive_process:num=1:block=yes"
+#BSUB -G team361
+#BSUB -U mlteam_burnin_beta
+#BSUB -cwd /lustre/scratch126/cellgen/lotfollahi/dv8/mint_flow_bench/mintflow-reproducibility/analysis/benchmarking/spatial_domains_recovery/STAGATE/main
+#BSUB -o logs/STAGATE_main_%J.out
+#BSUB -e logs/STAGATE_main_%J.err
+#BSUB -M 180000
+#BSUB -R "select[mem>180000] rusage[mem=180000]"
+#BSUB -J STAGATE_main
+
+set -euo pipefail
+mkdir -p logs
+
+export PYTHONUNBUFFERED=1
+export MPLCONFIGDIR=/lustre/scratch126/cellgen/lotfollahi/dv8/.cache/matplotlib
+export PIP_CACHE_DIR=/lustre/scratch126/cellgen/lotfollahi/dv8/.cache/pip
+mkdir -p "$MPLCONFIGDIR" "$PIP_CACHE_DIR"
+
+PY="/lustre/scratch126/cellgen/lotfollahi/dv8/mint_flow_bench/STAGATE/.venv_stagate/bin/python"
+RUNNER="/lustre/scratch126/cellgen/lotfollahi/dv8/mint_flow_bench/mintflow-reproducibility/analysis/benchmarking/spatial_domains_recovery/STAGATE/main/run_stagate_combined.py"
+
+$PY "$RUNNER"
+
