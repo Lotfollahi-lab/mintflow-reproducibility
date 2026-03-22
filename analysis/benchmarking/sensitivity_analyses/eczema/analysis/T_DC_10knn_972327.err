@@ -12,14 +12,3 @@ Read migration guide https://cellgeni.readthedocs.io/en/latest/conda.html
 
  To achieve the future defaults please pass: flavor="igraph" and n_iterations=2.  directed must also be False to work with igraph's implementation.
   sc.tl.leiden(adata, resolution=i, key_added=cluster_key, neighbors_key=neighbors_key)
-/nfs/team361/sb75/mintflow-reproducibility/analysis/benchmarking/sensitivity_analyses/eczema/analysis/R2C5_10knn_T_DC.py:171: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
-  plt.show()
-/nfs/team361/sb75/mintflow-reproducibility/analysis/benchmarking/sensitivity_analyses/eczema/analysis/R2C5_10knn_T_DC.py:189: FutureWarning: 
-
-Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.
-
-  sns.boxplot(data=plot_df_01, x='Metric', y='Value', ax=axes[0], palette='Set2')
-/nfs/team361/sb75/mintflow-reproducibility/analysis/benchmarking/sensitivity_analyses/eczema/analysis/R2C5_10knn_T_DC.py:220: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
-  plt.show()
-/nfs/team361/sb75/mintflow-reproducibility/analysis/benchmarking/sensitivity_analyses/eczema/analysis/R2C5_10knn_T_DC.py:261: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
-  plt.show()

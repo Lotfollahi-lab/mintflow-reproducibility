@@ -11634,3 +11634,22 @@ wandb: 🚀 View run at https://wandb.ai/sb75sanger/mintflow-skin/runs/u0oh7f4q
 MintFlow training epoch:  13%|█▎        | 6/47 [05:19<40:51, 59.78s/it][A
 MintFlow training epoch:  15%|█▍        | 7/47 [06:23<40:40, 61.01s/it][A
 MintFlow training epoch:  17%|█▋        | 8/47 [07:26<40:05, 61.68s/it][A
+MintFlow training epoch:  19%|█▉        | 9/47 [08:23<38:04, 60.13s/it][A
+MintFlow training epoch:  21%|██▏       | 10/47 [09:25<37:34, 60.93s/it][A
+MintFlow training epoch:  23%|██▎       | 11/47 [10:18<35:02, 58.39s/it][A
+MintFlow training epoch:  26%|██▌       | 12/47 [11:10<32:57, 56.51s/it][A
+MintFlow training epoch:  28%|██▊       | 13/47 [12:14<33:15, 58.70s/it][A
+MintFlow training epoch:  30%|██▉       | 14/47 [13:10<31:48, 57.84s/it][A
+MintFlow training epoch:  32%|███▏      | 15/47 [14:15<32:05, 60.18s/it][A
+MintFlow training epoch:  34%|███▍      | 16/47 [15:07<29:45, 57.59s/it][A
+MintFlow training epoch:  36%|███▌      | 17/47 [16:00<28:09, 56.30s/it][A
+MintFlow training epoch:  38%|███▊      | 18/47 [16:57<27:16, 56.43s/it][A
+MintFlow training epoch:  40%|████      | 19/47 [18:02<27:33, 59.07s/it][A
+MintFlow training epoch:  43%|████▎     | 20/47 [19:11<27:52, 61.94s/it][A
+MintFlow training epoch:  45%|████▍     | 21/47 [20:16<27:19, 63.05s/it][A
+MintFlow training epoch:  47%|████▋     | 22/47 [21:20<26:21, 63.25s/it][A
+MintFlow training epoch:  49%|████▉     | 23/47 [22:26<25:33, 63.88s/it][A
+MintFlow training epoch:  51%|█████     | 24/47 [23:25<24:01, 62.66s/it][A
+MintFlow training epoch:  53%|█████▎    | 25/47 [24:34<23:39, 64.51s/it][A
+MintFlow training epoch:  55%|█████▌    | 26/47 [25:38<22:30, 64.31s/it][A
+MintFlow training epoch:  57%|█████▋    | 27/47 [26:48<21:57, 65.89s/it][A

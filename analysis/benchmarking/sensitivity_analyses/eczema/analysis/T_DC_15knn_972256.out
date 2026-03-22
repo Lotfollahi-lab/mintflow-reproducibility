@@ -1,0 +1,66 @@
+Successfully mapped 25625 out of 25625 cells
+Top 5 parameter combinations by F1 score:
+    resolution  k_neighbors    recall  precision        f1  split_entropy
+43         0.8            6  0.467583   0.395349  0.428443       2.312812
+55         0.9           10  0.515717   0.350701  0.417495       2.124548
+9          0.4            4  0.515717   0.349069  0.416336       1.927917
+60         1.0            7  0.511788   0.349664  0.415470       2.119371
+61         1.0            8  0.524558   0.343408  0.415080       2.098944
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@dgx-c11-01>
+Subject: Job 972256: <T_DC_15knn> in cluster <farm22> Done
+
+Job <T_DC_15knn> was submitted from host <farm22-head1> by user <sb75> in cluster <farm22> at Sun Mar 22 19:37:25 2026
+Job was executed on host(s) <8*dgx-c11-01>, in queue <gpu-huge>, as user <sb75> in cluster <farm22> at Sun Mar 22 19:37:25 2026
+</nfs/users/nfs_s/sb75> was used as the home directory.
+</nfs/team361/sb75/mintflow-reproducibility/analysis/benchmarking/sensitivity_analyses/eczema/analysis> was used as the working directory.
+Started at Sun Mar 22 19:37:25 2026
+Terminated at Sun Mar 22 19:53:45 2026
+Results reported at Sun Mar 22 19:53:45 2026
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+# BSUB -G team361
+# BSUB -q gpu-huge
+# BSUB -n 8
+# BSUB -M 100000
+# BSUB -R "select[mem>100000] rusage[mem=100000]"
+# BSUB -gpu "num=1:mode=exclusive_process:gmem=20000"
+# BSUB -J T_DC_15knn
+# BSUB -o T_DC_15knn_%J.out
+# BSUB -e T_DC_15knn_%J.err
+
+source /etc/profile.d/modules.sh
+module load cellgen/conda
+conda activate /software/cellgen/team361/ms83/envs/mintflow-revision/
+python /nfs/team361/sb75/mintflow-reproducibility/analysis/benchmarking/sensitivity_analyses/eczema/analysis/R2C5_15knn_T_DC.py
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   979.00 sec.
+    Max Memory :                                 1725 MB
+    Average Memory :                             1419.55 MB
+    Total Requested Memory :                     100000.00 MB
+    Delta Memory :                               98275.00 MB
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                30
+    Run time :                                   979 sec.
+    Turnaround time :                            980 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <T_DC_15knn_972256.err> for stderr output of this job.
+

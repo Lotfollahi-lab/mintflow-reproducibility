@@ -143,7 +143,7 @@ for i in res:
 # Convert to DataFrame
 results_df = pd.DataFrame(results)
 results_df
-results_df.to_csv('20knn_T_DC_metrics.csv')
+results_df.to_csv(save_dir + '20knn_T_DC_metrics.csv')
 
 # Display best parameters
 print("Top 5 parameter combinations by F1 score:")
