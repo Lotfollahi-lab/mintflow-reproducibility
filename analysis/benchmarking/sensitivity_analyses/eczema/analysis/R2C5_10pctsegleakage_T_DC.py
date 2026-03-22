@@ -16,8 +16,8 @@ import seaborn as sns
 
 from scipy.stats import entropy
 
-initDir = '/nfs/team361/sb75/mintflow-reproducibility/artifacts/benchmarking/results/sensitivity_analysis/eczema/10pctlabelnoise/adata_output/'
-save_dir = '/nfs/team361/sb75/mintflow-reproducibility/artifacts/benchmarking/results/sensitivity_analysis/eczema/10pctlabelnoise/analysis/'
+initDir = '/nfs/team361/sb75/mintflow-reproducibility/artifacts/benchmarking/results/sensitivity_analysis/eczema/10pctsegleakage/adata_output/'
+save_dir = '/nfs/team361/sb75/mintflow-reproducibility/artifacts/benchmarking/results/sensitivity_analysis/eczema/10pctsegleakage/analysis/'
 
 adata = sc.read_h5ad(initDir + 'adata_mintflow_checkpoint_19.h5ad')
 adata
@@ -129,7 +129,7 @@ results = []
 for i in res: 
     for k in knn:
         neighbors_key = f"neighbors_{k}"
-        cluster_key = f"{i}_{k}_cluster_10pctlabelnoise"
+        cluster_key = f"{i}_{k}_cluster_10pctsegleakage"
         
         sc.pp.neighbors(adata, use_rep="MintFlow_Xbar_mic", n_neighbors=k, key_added=neighbors_key)
         sc.tl.leiden(adata, resolution=i, key_added=cluster_key, neighbors_key=neighbors_key)
@@ -143,7 +143,7 @@ for i in res:
 # Convert to DataFrame
 results_df = pd.DataFrame(results)
 results_df
-results_df.to_csv('10pctlabelnoise_T_DC_metrics.csv')
+results_df.to_csv('10pctsegleakage_T_DC_metrics.csv')
 
 # Display best parameters
 print("Top 5 parameter combinations by F1 score:")
@@ -167,7 +167,7 @@ for idx, metric in enumerate(['recall', 'precision', 'f1', 'split_entropy']):
     ax.set_ylabel('Resolution')
 
 plt.tight_layout()
-plt.savefig('T_DC_10pctlabelnoise_recovery_metrics.pdf', dpi=300, bbox_inches='tight')
+plt.savefig(save_dir + 'T_DC_10pctsegleakage_recovery_metrics.pdf', dpi=300, bbox_inches='tight')
 plt.show()
 
 # Create figure with two subplots - main metrics and entropy
@@ -216,10 +216,10 @@ axes[1].grid(axis='y', alpha=0.3, linestyle='--')
 plt.suptitle('T_DC Niche Recovery Metrics Across All Parameter Combinations', 
              fontsize=12, fontweight='bold', y=1.00)
 plt.tight_layout()
-plt.savefig('T_DC_10pctlabelnoise_recovery_boxplots.pdf', dpi=300, bbox_inches='tight')
+plt.savefig(save_dir + 'T_DC_10pctsegleakage_recovery_boxplots.pdf', dpi=300, bbox_inches='tight')
 plt.show()
 
-adata.write_h5ad(save_dir + 'adata_mintflow_checkpoint_19_10pctlabelnoise_spl_clusters.h5ad')
+adata.write_h5ad(save_dir + 'adata_mintflow_checkpoint_19_10pctsegleakage_spl_clusters.h5ad')
 
 # Get top 3 parameter combinations by F1 score
 top_params = results_df.nlargest(3, 'f1')[['resolution', 'k_neighbors']]
@@ -241,7 +241,7 @@ for idx, (_, row) in enumerate(top_params.iterrows()):
     k = int(row['k_neighbors'])
     
     neighbors_key = f"neighbors_{k}"
-    cluster_key = f"{i}_{k}_cluster_10pctlabelnoise"
+    cluster_key = f"{i}_{k}_cluster_10pctsegleakage"
     
     # Compute UMAP for this specific neighbors_key
     sc.tl.umap(adata, neighbors_key=neighbors_key)
@@ -257,7 +257,7 @@ for idx, (_, row) in enumerate(top_params.iterrows()):
                ax=axes[idx], show=False)
 
 plt.tight_layout()
-plt.savefig('T_DC_10pctlabelnoise_top_recoveries.pdf', dpi=300, bbox_inches='tight')
+plt.savefig(save_dir + 'T_DC_10pctsegleakage_top_recoveries.pdf', dpi=300, bbox_inches='tight')
 plt.show()
 
-adata.write_h5ad(save_dir + 'adata_mintflow_checkpoint_19_10pctlabelnoise_spl_clusters.h5ad')
+adata.write_h5ad(save_dir + 'adata_mintflow_checkpoint_19_10pctsegleakage_spl_clusters.h5ad')

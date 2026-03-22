@@ -167,7 +167,7 @@ for idx, metric in enumerate(['recall', 'precision', 'f1', 'split_entropy']):
     ax.set_ylabel('Resolution')
 
 plt.tight_layout()
-plt.savefig('T_DC_20pctlabelnoise_recovery_metrics.pdf', dpi=300, bbox_inches='tight')
+plt.savefig(save_dir + 'T_DC_20pctlabelnoise_recovery_metrics.pdf', dpi=300, bbox_inches='tight')
 plt.show()
 
 # Create figure with two subplots - main metrics and entropy
@@ -216,7 +216,7 @@ axes[1].grid(axis='y', alpha=0.3, linestyle='--')
 plt.suptitle('T_DC Niche Recovery Metrics Across All Parameter Combinations', 
              fontsize=12, fontweight='bold', y=1.00)
 plt.tight_layout()
-plt.savefig('T_DC_20pctlabelnoise_recovery_boxplots.pdf', dpi=300, bbox_inches='tight')
+plt.savefig(save_dir + 'T_DC_20pctlabelnoise_recovery_boxplots.pdf', dpi=300, bbox_inches='tight')
 plt.show()
 
 adata.write_h5ad(save_dir + 'adata_mintflow_checkpoint_19_20pctlabelnoise_spl_clusters.h5ad')
@@ -257,7 +257,7 @@ for idx, (_, row) in enumerate(top_params.iterrows()):
                ax=axes[idx], show=False)
 
 plt.tight_layout()
-plt.savefig('T_DC_20pctlabelnoise_top_recoveries.pdf', dpi=300, bbox_inches='tight')
+plt.savefig(save_dir + 'T_DC_20pctlabelnoise_top_recoveries.pdf', dpi=300, bbox_inches='tight')
 plt.show()
 
 adata.write_h5ad(save_dir + 'adata_mintflow_checkpoint_19_20pctlabelnoise_spl_clusters.h5ad')
