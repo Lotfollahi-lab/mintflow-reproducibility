@@ -1,0 +1,40 @@
+{
+  "os":  "Linux-5.15.0-141-generic-x86_64-with-glibc2.35",
+  "python":  "CPython 3.11.14",
+  "startedAt":  "2026-03-18T22:36:38.587796Z",
+  "program":  "/nfs/team361/sb75/mintflow-reproducibility/analysis/benchmarking/sensitivity_analyses/eczema/nb2_train_20knn.py",
+  "codePath":  "analysis/benchmarking/sensitivity_analyses/eczema/nb2_train_20knn.py",
+  "codePathLocal":  "nb2_train_20knn.py",
+  "git":  {
+    "remote":  "https://github.com/Lotfollahi-lab/mintflow-reproducibility.git",
+    "commit":  "785e571d3bb3b1c349334f68de0be19b39ff8cb9"
+  },
+  "email":  "sb75@sanger.ac.uk",
+  "root":  "/nfs/team361/sb75/mintflow-reproducibility/analysis/benchmarking/sensitivity_analyses/eczema",
+  "host":  "farm22-gpu0202",
+  "executable":  "/nfs/team361/aa36/PythonEnvs_2/env_Dec27th_mintflow/bin/python",
+  "cpu_count":  96,
+  "cpu_count_logical":  192,
+  "gpu":  "NVIDIA A100-SXM4-80GB",
+  "gpu_count":  1,
+  "disk":  {
+    "/":  {
+      "total":  "134145380352",
+      "used":  "86806646784"
+    }
+  },
+  "memory":  {
+    "total":  "1081644142592"
+  },
+  "gpu_nvidia":  [
+    {
+      "name":  "NVIDIA A100-SXM4-80GB",
+      "memoryTotal":  "85899345920",
+      "cudaCores":  6912,
+      "architecture":  "Ampere",
+      "uuid":  "GPU-85501558-a8fe-0179-e274-89d6d8fc7c4d"
+    }
+  ],
+  "cudaVersion":  "12.4",
+  "writerId":  "272pztkqbw6kiypcb8sgbe4xb77lx90v"
+}
