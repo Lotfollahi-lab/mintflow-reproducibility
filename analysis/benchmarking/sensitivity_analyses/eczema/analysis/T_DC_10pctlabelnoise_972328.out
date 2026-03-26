@@ -1,0 +1,66 @@
+Successfully mapped 25625 out of 25625 cells
+Top 5 parameter combinations by F1 score:
+    resolution  k_neighbors    recall  precision        f1  split_entropy
+53         0.9            8  0.560904   0.349877  0.430943       1.947538
+51         0.9            6  0.586444   0.331667  0.423705       2.117688
+59         1.0            6  0.601179   0.326923  0.423529       2.122446
+54         0.9            9  0.561886   0.339667  0.423390       2.026818
+49         0.9            4  0.558939   0.340515  0.423206       2.270429
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@dgx-c11-01>
+Subject: Job 972328: <T_DC_10pctlabelnoise> in cluster <farm22> Done
+
+Job <T_DC_10pctlabelnoise> was submitted from host <farm22-head1> by user <sb75> in cluster <farm22> at Sun Mar 22 20:03:07 2026
+Job was executed on host(s) <8*dgx-c11-01>, in queue <gpu-huge>, as user <sb75> in cluster <farm22> at Sun Mar 22 20:03:13 2026
+</nfs/users/nfs_s/sb75> was used as the home directory.
+</nfs/team361/sb75/mintflow-reproducibility/analysis/benchmarking/sensitivity_analyses/eczema/analysis> was used as the working directory.
+Started at Sun Mar 22 20:03:13 2026
+Terminated at Sun Mar 22 20:18:34 2026
+Results reported at Sun Mar 22 20:18:34 2026
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+# BSUB -G team361
+# BSUB -q gpu-huge
+# BSUB -n 8
+# BSUB -M 100000
+# BSUB -R "select[mem>100000] rusage[mem=100000]"
+# BSUB -gpu "num=1:mode=exclusive_process:gmem=20000"
+# BSUB -J T_DC_10pctlabelnoise
+# BSUB -o T_DC_10pctlabelnoise_%J.out
+# BSUB -e T_DC_10pctlabelnoise_%J.err
+
+source /etc/profile.d/modules.sh
+module load cellgen/conda
+conda activate /software/cellgen/team361/ms83/envs/mintflow-revision/
+python /nfs/team361/sb75/mintflow-reproducibility/analysis/benchmarking/sensitivity_analyses/eczema/analysis/R2C5_10pctlabelnoise_T_DC.py
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   926.00 sec.
+    Max Memory :                                 1729 MB
+    Average Memory :                             1418.25 MB
+    Total Requested Memory :                     100000.00 MB
+    Delta Memory :                               98271.00 MB
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                30
+    Run time :                                   927 sec.
+    Turnaround time :                            927 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <T_DC_10pctlabelnoise_972328.err> for stderr output of this job.
+

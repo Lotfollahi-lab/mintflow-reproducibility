@@ -1,0 +1,71 @@
+_wandb:
+    value:
+        cli_version: 0.23.1
+        e:
+            3jbw5d4blrdkiccfc5fptq1d8o3eqwm9:
+                codePath: analysis/benchmarking/sensitivity_analyses/eczema/nb2_train_20pctsegleakage.py
+                codePathLocal: nb2_train_20pctsegleakage.py
+                cpu_count: 96
+                cpu_count_logical: 192
+                cudaVersion: "12.4"
+                disk:
+                    /:
+                        total: "134145380352"
+                        used: "86831525888"
+                email: sb75@sanger.ac.uk
+                executable: /nfs/team361/aa36/PythonEnvs_2/env_Dec27th_mintflow/bin/python
+                git:
+                    commit: 2560b0977d34239ff9e8dd483ce5c2a19f2453b1
+                    remote: https://github.com/Lotfollahi-lab/mintflow-reproducibility.git
+                gpu: NVIDIA A100-SXM4-80GB
+                gpu_count: 1
+                gpu_nvidia:
+                    - architecture: Ampere
+                      cudaCores: 6912
+                      memoryTotal: "85899345920"
+                      name: NVIDIA A100-SXM4-80GB
+                      uuid: GPU-85501558-a8fe-0179-e274-89d6d8fc7c4d
+                host: farm22-gpu0202
+                memory:
+                    total: "1081644142592"
+                os: Linux-5.15.0-141-generic-x86_64-with-glibc2.35
+                program: /nfs/team361/sb75/mintflow-reproducibility/analysis/benchmarking/sensitivity_analyses/eczema/nb2_train_20pctsegleakage.py
+                python: CPython 3.11.14
+                root: /nfs/team361/sb75/mintflow-reproducibility/analysis/benchmarking/sensitivity_analyses/eczema
+                startedAt: "2026-03-23T00:07:38.591593Z"
+                writerId: 3jbw5d4blrdkiccfc5fptq1d8o3eqwm9
+        m: []
+        python_version: 3.11.14
+        t:
+            "1":
+                - 1
+                - 5
+                - 9
+                - 12
+                - 41
+                - 53
+                - 54
+                - 77
+                - 103
+                - 106
+            "2":
+                - 1
+                - 5
+                - 9
+                - 12
+                - 41
+                - 53
+                - 54
+                - 77
+                - 103
+                - 106
+            "3":
+                - 13
+                - 16
+                - 61
+            "4": 3.11.14
+            "5": 0.23.1
+            "12": 0.23.1
+            "13": linux-x86_64
+dd:
+    value: dd

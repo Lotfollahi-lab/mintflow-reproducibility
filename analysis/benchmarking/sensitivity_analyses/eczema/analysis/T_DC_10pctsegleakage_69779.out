@@ -1,0 +1,66 @@
+Successfully mapped 25625 out of 25625 cells
+Top 5 parameter combinations by F1 score:
+    resolution  k_neighbors    recall  precision        f1  split_entropy
+44         0.8            7  0.578585   0.298985  0.394244       2.022976
+43         0.8            6  0.541257   0.309377  0.393712       2.056666
+41         0.8            4  0.417485   0.370855  0.392791       2.560768
+35         0.7            6  0.589391   0.294118  0.392413       1.893973
+34         0.7            5  0.533399   0.308348  0.390788       2.038701
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@farm22-gpu0203>
+Subject: Job 69779: <T_DC_10pctsegleakage> in cluster <farm22> Done
+
+Job <T_DC_10pctsegleakage> was submitted from host <farm22-head1> by user <sb75> in cluster <farm22> at Mon Mar 23 18:10:02 2026
+Job was executed on host(s) <8*farm22-gpu0203>, in queue <gpu-huge>, as user <sb75> in cluster <farm22> at Mon Mar 23 18:13:18 2026
+</nfs/users/nfs_s/sb75> was used as the home directory.
+</nfs/team361/sb75/mintflow-reproducibility/analysis/benchmarking/sensitivity_analyses/eczema/analysis> was used as the working directory.
+Started at Mon Mar 23 18:13:18 2026
+Terminated at Mon Mar 23 18:26:26 2026
+Results reported at Mon Mar 23 18:26:26 2026
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+# BSUB -G team361
+# BSUB -q gpu-huge
+# BSUB -n 8
+# BSUB -M 100000
+# BSUB -R "select[mem>100000] rusage[mem=100000]"
+# BSUB -gpu "num=1:mode=exclusive_process:gmem=20000"
+# BSUB -J T_DC_10pctsegleakage
+# BSUB -o T_DC_10pctsegleakage_%J.out
+# BSUB -e T_DC_10pctsegleakage_%J.err
+
+source /etc/profile.d/modules.sh
+module load cellgen/conda
+conda activate /software/cellgen/team361/ms83/envs/mintflow-revision/
+python /nfs/team361/sb75/mintflow-reproducibility/analysis/benchmarking/sensitivity_analyses/eczema/analysis/R2C5_10pctsegleakage_T_DC.py
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   679.00 sec.
+    Max Memory :                                 1816 MB
+    Average Memory :                             1380.33 MB
+    Total Requested Memory :                     100000.00 MB
+    Delta Memory :                               98184.00 MB
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                29
+    Run time :                                   828 sec.
+    Turnaround time :                            984 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <T_DC_10pctsegleakage_69779.err> for stderr output of this job.
+

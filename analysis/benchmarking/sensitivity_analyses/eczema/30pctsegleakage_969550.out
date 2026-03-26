@@ -1,0 +1,335 @@
+cuda:0
+Done!
+Done!
+Done!
+Done!
+checking if /nfs/team361/sb75/mintflow-reproducibility/datasets/benchmarking/sensitivity_analyses/eczema/segmentation_errors/segmentation_leakage_30pct/BK23_Lesional_Baseline.h5ad and /nfs/team361/sb75/mintflow-reproducibility/datasets/benchmarking/sensitivity_analyses/eczema/segmentation_errors/segmentation_leakage_30pct/BK23_Lesional_Baseline.h5ad share the same gene panel
+    >>> also checked that anndata.X contains count data.
+checking if /nfs/team361/sb75/mintflow-reproducibility/datasets/benchmarking/sensitivity_analyses/eczema/segmentation_errors/segmentation_leakage_30pct/BK23_Lesional_Baseline.h5ad and /nfs/team361/sb75/mintflow-reproducibility/datasets/benchmarking/sensitivity_analyses/eczema/segmentation_errors/segmentation_leakage_30pct/BK30_Day_14.h5ad share the same gene panel
+    >>> also checked that anndata.X contains count data.
+checking if /nfs/team361/sb75/mintflow-reproducibility/datasets/benchmarking/sensitivity_analyses/eczema/segmentation_errors/segmentation_leakage_30pct/BK23_Lesional_Baseline.h5ad and /nfs/team361/sb75/mintflow-reproducibility/datasets/benchmarking/sensitivity_analyses/eczema/segmentation_errors/segmentation_leakage_30pct/BK39_Non_lesional_Baseline.h5ad share the same gene panel
+    >>> also checked that anndata.X contains count data.
+checking if /nfs/team361/sb75/mintflow-reproducibility/datasets/benchmarking/sensitivity_analyses/eczema/segmentation_errors/segmentation_leakage_30pct/BK23_Lesional_Baseline.h5ad and /nfs/team361/sb75/mintflow-reproducibility/datasets/benchmarking/sensitivity_analyses/eczema/segmentation_errors/segmentation_leakage_30pct/BK27_Non_lesional_Baseline.h5ad share the same gene panel
+    >>> also checked that anndata.X contains count data.
+checking if /nfs/team361/sb75/mintflow-reproducibility/datasets/benchmarking/sensitivity_analyses/eczema/segmentation_errors/segmentation_leakage_30pct/BK23_Lesional_Baseline.h5ad and /nfs/team361/sb75/mintflow-reproducibility/datasets/benchmarking/sensitivity_analyses/eczema/segmentation_errors/segmentation_leakage_30pct/BK23_Non_lesional_Baseline.h5ad share the same gene panel
+    >>> also checked that anndata.X contains count data.
+checking if /nfs/team361/sb75/mintflow-reproducibility/datasets/benchmarking/sensitivity_analyses/eczema/segmentation_errors/segmentation_leakage_30pct/BK23_Lesional_Baseline.h5ad and /nfs/team361/sb75/mintflow-reproducibility/datasets/benchmarking/sensitivity_analyses/eczema/segmentation_errors/segmentation_leakage_30pct/BK39_Lesional_Baseline.h5ad share the same gene panel
+    >>> also checked that anndata.X contains count data.
+checking if /nfs/team361/sb75/mintflow-reproducibility/datasets/benchmarking/sensitivity_analyses/eczema/segmentation_errors/segmentation_leakage_30pct/BK23_Lesional_Baseline.h5ad and /nfs/team361/sb75/mintflow-reproducibility/datasets/benchmarking/sensitivity_analyses/eczema/segmentation_errors/segmentation_leakage_30pct/BK30_Lesional_Baseline.h5ad share the same gene panel
+    >>> also checked that anndata.X contains count data.
+checking if /nfs/team361/sb75/mintflow-reproducibility/datasets/benchmarking/sensitivity_analyses/eczema/segmentation_errors/segmentation_leakage_30pct/BK23_Lesional_Baseline.h5ad and /nfs/team361/sb75/mintflow-reproducibility/datasets/benchmarking/sensitivity_analyses/eczema/segmentation_errors/segmentation_leakage_30pct/BK22_Lesional_Baseline.h5ad share the same gene panel
+    >>> also checked that anndata.X contains count data.
+checking if /nfs/team361/sb75/mintflow-reproducibility/datasets/benchmarking/sensitivity_analyses/eczema/segmentation_errors/segmentation_leakage_30pct/BK23_Lesional_Baseline.h5ad and /nfs/team361/sb75/mintflow-reproducibility/datasets/benchmarking/sensitivity_analyses/eczema/segmentation_errors/segmentation_leakage_30pct/BK21_Lesional_Baseline.h5ad share the same gene panel
+    >>> also checked that anndata.X contains count data.
+checking if /nfs/team361/sb75/mintflow-reproducibility/datasets/benchmarking/sensitivity_analyses/eczema/segmentation_errors/segmentation_leakage_30pct/BK23_Lesional_Baseline.h5ad and /nfs/team361/sb75/mintflow-reproducibility/datasets/benchmarking/sensitivity_analyses/eczema/segmentation_errors/segmentation_leakage_30pct/BK18_Lesional_Baseline.h5ad share the same gene panel
+    >>> also checked that anndata.X contains count data.
+checking if /nfs/team361/sb75/mintflow-reproducibility/datasets/benchmarking/sensitivity_analyses/eczema/segmentation_errors/segmentation_leakage_30pct/BK23_Lesional_Baseline.h5ad and /nfs/team361/sb75/mintflow-reproducibility/datasets/benchmarking/sensitivity_analyses/eczema/segmentation_errors/segmentation_leakage_30pct/BK23_Lesional_Baseline.h5ad share the same gene panel
+    >>> also checked that anndata.X contains count data.
+checking if /nfs/team361/sb75/mintflow-reproducibility/datasets/benchmarking/sensitivity_analyses/eczema/segmentation_errors/segmentation_leakage_30pct/BK23_Lesional_Baseline.h5ad and /nfs/team361/sb75/mintflow-reproducibility/datasets/benchmarking/sensitivity_analyses/eczema/segmentation_errors/segmentation_leakage_30pct/BK30_Day_14.h5ad share the same gene panel
+    >>> also checked that anndata.X contains count data.
+checking if /nfs/team361/sb75/mintflow-reproducibility/datasets/benchmarking/sensitivity_analyses/eczema/segmentation_errors/segmentation_leakage_30pct/BK23_Lesional_Baseline.h5ad and /nfs/team361/sb75/mintflow-reproducibility/datasets/benchmarking/sensitivity_analyses/eczema/segmentation_errors/segmentation_leakage_30pct/BK39_Non_lesional_Baseline.h5ad share the same gene panel
+    >>> also checked that anndata.X contains count data.
+checking if /nfs/team361/sb75/mintflow-reproducibility/datasets/benchmarking/sensitivity_analyses/eczema/segmentation_errors/segmentation_leakage_30pct/BK23_Lesional_Baseline.h5ad and /nfs/team361/sb75/mintflow-reproducibility/datasets/benchmarking/sensitivity_analyses/eczema/segmentation_errors/segmentation_leakage_30pct/BK27_Non_lesional_Baseline.h5ad share the same gene panel
+    >>> also checked that anndata.X contains count data.
+checking if /nfs/team361/sb75/mintflow-reproducibility/datasets/benchmarking/sensitivity_analyses/eczema/segmentation_errors/segmentation_leakage_30pct/BK23_Lesional_Baseline.h5ad and /nfs/team361/sb75/mintflow-reproducibility/datasets/benchmarking/sensitivity_analyses/eczema/segmentation_errors/segmentation_leakage_30pct/BK23_Non_lesional_Baseline.h5ad share the same gene panel
+    >>> also checked that anndata.X contains count data.
+checking if /nfs/team361/sb75/mintflow-reproducibility/datasets/benchmarking/sensitivity_analyses/eczema/segmentation_errors/segmentation_leakage_30pct/BK23_Lesional_Baseline.h5ad and /nfs/team361/sb75/mintflow-reproducibility/datasets/benchmarking/sensitivity_analyses/eczema/segmentation_errors/segmentation_leakage_30pct/BK39_Lesional_Baseline.h5ad share the same gene panel
+    >>> also checked that anndata.X contains count data.
+checking if /nfs/team361/sb75/mintflow-reproducibility/datasets/benchmarking/sensitivity_analyses/eczema/segmentation_errors/segmentation_leakage_30pct/BK23_Lesional_Baseline.h5ad and /nfs/team361/sb75/mintflow-reproducibility/datasets/benchmarking/sensitivity_analyses/eczema/segmentation_errors/segmentation_leakage_30pct/BK30_Lesional_Baseline.h5ad share the same gene panel
+    >>> also checked that anndata.X contains count data.
+checking if /nfs/team361/sb75/mintflow-reproducibility/datasets/benchmarking/sensitivity_analyses/eczema/segmentation_errors/segmentation_leakage_30pct/BK23_Lesional_Baseline.h5ad and /nfs/team361/sb75/mintflow-reproducibility/datasets/benchmarking/sensitivity_analyses/eczema/segmentation_errors/segmentation_leakage_30pct/BK22_Lesional_Baseline.h5ad share the same gene panel
+    >>> also checked that anndata.X contains count data.
+checking if /nfs/team361/sb75/mintflow-reproducibility/datasets/benchmarking/sensitivity_analyses/eczema/segmentation_errors/segmentation_leakage_30pct/BK23_Lesional_Baseline.h5ad and /nfs/team361/sb75/mintflow-reproducibility/datasets/benchmarking/sensitivity_analyses/eczema/segmentation_errors/segmentation_leakage_30pct/BK21_Lesional_Baseline.h5ad share the same gene panel
+    >>> also checked that anndata.X contains count data.
+checking if /nfs/team361/sb75/mintflow-reproducibility/datasets/benchmarking/sensitivity_analyses/eczema/segmentation_errors/segmentation_leakage_30pct/BK23_Lesional_Baseline.h5ad and /nfs/team361/sb75/mintflow-reproducibility/datasets/benchmarking/sensitivity_analyses/eczema/segmentation_errors/segmentation_leakage_30pct/BK18_Lesional_Baseline.h5ad share the same gene panel
+    >>> also checked that anndata.X contains count data.
+
+
+Device is set to cuda:0.
+
+
+ Double-checked floating point conversion on adata.X.
+Using the custom sampler for pygloader.
+ Double-checked floating point conversion on adata.X.
+Using the custom sampler for pygloader.
+ Double-checked floating point conversion on adata.X.
+Using the custom sampler for pygloader.
+ Double-checked floating point conversion on adata.X.
+Using the custom sampler for pygloader.
+ Double-checked floating point conversion on adata.X.
+Using the custom sampler for pygloader.
+ Double-checked floating point conversion on adata.X.
+Using the custom sampler for pygloader.
+ Double-checked floating point conversion on adata.X.
+Using the custom sampler for pygloader.
+ Double-checked floating point conversion on adata.X.
+Using the custom sampler for pygloader.
+ Double-checked floating point conversion on adata.X.
+Using the custom sampler for pygloader.
+ Double-checked floating point conversion on adata.X.
+Using the custom sampler for pygloader.
+
+
+created list_slice for training.
+Tissue {'BK23_Lesional Baseline'} --> 25625 cells
+Tissue {'BK30_Day 14'} --> 30861 cells
+Tissue {'BK39_Non-lesional Baseline'} --> 17005 cells
+Tissue {'BK27_Non-lesional Baseline'} --> 16555 cells
+Tissue {'BK23_Non-lesional Baseline'} --> 18244 cells
+Tissue {'BK39_Lesional Baseline'} --> 16836 cells
+Tissue {'BK30_Lesional Baseline'} --> 17379 cells
+Tissue {'BK22_Lesional Baseline'} --> 21656 cells
+Tissue {'BK21_Lesional Baseline'} --> 15534 cells
+Tissue {'BK18_Lesional Baseline'} --> 17792 cells
+
+
+
+ Double-checked floating point conversion on adata.X.
+Using the custom sampler for pygloader.
+ Double-checked floating point conversion on adata.X.
+Using the custom sampler for pygloader.
+ Double-checked floating point conversion on adata.X.
+Using the custom sampler for pygloader.
+ Double-checked floating point conversion on adata.X.
+Using the custom sampler for pygloader.
+ Double-checked floating point conversion on adata.X.
+Using the custom sampler for pygloader.
+ Double-checked floating point conversion on adata.X.
+Using the custom sampler for pygloader.
+ Double-checked floating point conversion on adata.X.
+Using the custom sampler for pygloader.
+ Double-checked floating point conversion on adata.X.
+Using the custom sampler for pygloader.
+ Double-checked floating point conversion on adata.X.
+Using the custom sampler for pygloader.
+ Double-checked floating point conversion on adata.X.
+Using the custom sampler for pygloader.
+
+
+created list_slice for evaluation.
+Tissue {'BK23_Lesional Baseline'} --> 25625 cells
+Tissue {'BK30_Day 14'} --> 30861 cells
+Tissue {'BK39_Non-lesional Baseline'} --> 17005 cells
+Tissue {'BK27_Non-lesional Baseline'} --> 16555 cells
+Tissue {'BK23_Non-lesional Baseline'} --> 18244 cells
+Tissue {'BK39_Lesional Baseline'} --> 16836 cells
+Tissue {'BK30_Lesional Baseline'} --> 17379 cells
+Tissue {'BK22_Lesional Baseline'} --> 21656 cells
+Tissue {'BK21_Lesional Baseline'} --> 15534 cells
+Tissue {'BK18_Lesional Baseline'} --> 17792 cells
+
+
+
+
+
+
+
+The provided cell types are aggregated/mapped to mintflow cell types as follow:
+{'Adipocyte': 'inflowCT_0',
+ 'F1: Superficial': 'inflowCT_1',
+ 'F2/3: Stroma_PPARG+': 'inflowCT_2',
+ 'F2: Universal': 'inflowCT_3',
+ 'F3: FRC-like': 'inflowCT_4',
+ 'F4: Hair follicle-associated': 'inflowCT_5',
+ 'F5: Schwann-like': 'inflowCT_6',
+ 'KC1-2': 'inflowCT_7',
+ 'KC2/3_cycling': 'inflowCT_8',
+ 'KC3': 'inflowCT_9',
+ 'KC4': 'inflowCT_10',
+ 'KC5': 'inflowCT_11',
+ 'KC_HF': 'inflowCT_12',
+ 'KC_Sebocyte': 'inflowCT_13',
+ 'KCinflamm_basal/int': 'inflowCT_14',
+ 'KCinflamm_late': 'inflowCT_15',
+ 'LC': 'inflowCT_16',
+ 'LE': 'inflowCT_17',
+ 'Mac2': 'inflowCT_18',
+ 'Mac2_CCL14hi': 'inflowCT_19',
+ 'Mast cell': 'inflowCT_20',
+ 'Melanocyte': 'inflowCT_21',
+ 'MigDC': 'inflowCT_22',
+ 'MoDC/cDC2': 'inflowCT_23',
+ 'Nonspecific': 'inflowCT_24',
+ 'Pericyte1_CCL19+': 'inflowCT_25',
+ 'Pericyte2_CASQ2+': 'inflowCT_26',
+ 'Plasma cell': 'inflowCT_27',
+ 'Schwann': 'inflowCT_28',
+ 'Smooth muscle': 'inflowCT_29',
+ 'Sweat gland': 'inflowCT_30',
+ 'Sweat gland channel': 'inflowCT_31',
+ 'T': 'inflowCT_32',
+ 'T_Prolif': 'inflowCT_33',
+ 'Tc_IL13': 'inflowCT_34',
+ 'Treg': 'inflowCT_35',
+ 'VE': 'inflowCT_36',
+ 'cDC1': 'inflowCT_37',
+ 'cDC2': 'inflowCT_38',
+ 'pDC': 'inflowCT_39'}
+
+
+
+
+
+
+
+The provided biological batch IDs are aggregated/mapped to mintflow batch IDs as follows
+{'BK18_Lesional Baseline': 'inflow_BatchID_9',
+ 'BK21_Lesional Baseline': 'inflow_BatchID_8',
+ 'BK22_Lesional Baseline': 'inflow_BatchID_7',
+ 'BK23_Lesional Baseline': 'inflow_BatchID_0',
+ 'BK23_Non-lesional Baseline': 'inflow_BatchID_4',
+ 'BK27_Non-lesional Baseline': 'inflow_BatchID_3',
+ 'BK30_Day 14': 'inflow_BatchID_1',
+ 'BK30_Lesional Baseline': 'inflow_BatchID_6',
+ 'BK39_Lesional Baseline': 'inflow_BatchID_5',
+ 'BK39_Non-lesional Baseline': 'inflow_BatchID_2'}
+
+
+
+One-hot encoded batch ID for each sample (tissue):
+     sample BK23_Lesional Baseline --> batch ID {0}
+     sample BK30_Day 14 --> batch ID {1}
+     sample BK39_Non-lesional Baseline --> batch ID {2}
+     sample BK27_Non-lesional Baseline --> batch ID {3}
+     sample BK23_Non-lesional Baseline --> batch ID {4}
+     sample BK39_Lesional Baseline --> batch ID {5}
+     sample BK30_Lesional Baseline --> batch ID {6}
+     sample BK22_Lesional Baseline --> batch ID {7}
+     sample BK21_Lesional Baseline --> batch ID {8}
+     sample BK18_Lesional Baseline --> batch ID {9}
+Customised neighbourloader sampler: computing some initial stats (max number of central nodes, etc) for each tissue.
+Tissue # 1
+    width_window=800 --> [maxnum_centralnodes:3374.0,    worse-case batchsize:20254]
+Tissue # 2
+    width_window=800 --> [maxnum_centralnodes:3850.0,    worse-case batchsize:23110]
+Tissue # 3
+    width_window=600 --> [maxnum_centralnodes:1763.0,    worse-case batchsize:10588]
+Tissue # 4
+    width_window=900 --> [maxnum_centralnodes:2298.0,    worse-case batchsize:13798]
+Tissue # 5
+    width_window=600 --> [maxnum_centralnodes:2703.0,    worse-case batchsize:16228]
+Tissue # 6
+    width_window=600 --> [maxnum_centralnodes:2733.0,    worse-case batchsize:16408]
+Tissue # 7
+    width_window=600 --> [maxnum_centralnodes:2112.0,    worse-case batchsize:12682]
+Tissue # 8
+    width_window=600 --> [maxnum_centralnodes:3872.0,    worse-case batchsize:23242]
+Tissue # 9
+    width_window=600 --> [maxnum_centralnodes:2012.0,    worse-case batchsize:12082]
+Tissue # 10
+    width_window=1200 --> [maxnum_centralnodes:4274.0,    worse-case batchsize:25654]
+Done!
+
+
+Device is set to cuda:0.
+
+
+
+
+dict_pname_to_scaleandunweighted is set to:
+{'sin': [0.1, True],
+ 'sout': [1.0, True],
+ 'x': [None, None],
+ 'xbar_int': [0.1, True],
+ 'xbar_spl': [0.1, True],
+ 'z': [1.0, True]}
+
+
+
+{'CT': '0.ArchInsertionPoint', 'NCC': '3.ArchInsertionPoint'}
+
+dict_qname_to_scaleandunweighted is set to: 
+{'impanddisentgl_int': {'flag_unweighted': True, 'scale': 0.1},
+ 'impanddisentgl_spl': {'flag_unweighted': True, 'scale': 0.0},
+ 'sin': {'flag_unweighted': True, 'scale': 0.0},
+ 'sout': {'flag_unweighted': True, 'scale': 0.0},
+ 'varphi_enc_int': {'flag_unweighted': True, 'scale': 0.0},
+ 'varphi_enc_spl': {'flag_unweighted': True, 'scale': 0.0},
+ 'z': {'flag_unweighted': True, 'scale': 0.0}}
+
+
+The way CTs/NCCs are fed to the 3rd encoder:
+{'sin': [False, True], 'sout': [True, False], 'z': [True, False]}
+MintFlow module was created on cuda:0.
+Done!
+Done!
+     Getting different embeddings to update the dual functions separately.
+     Getting different embeddings to update the dual functions separately.
+     Getting different embeddings to update the dual functions separately.
+     Getting different embeddings to update the dual functions separately.
+     Getting different embeddings to update the dual functions separately.
+     Getting different embeddings to update the dual functions separately.
+     Getting different embeddings to update the dual functions separately.
+     Getting different embeddings to update the dual functions separately.
+     Getting different embeddings to update the dual functions separately.
+     Getting different embeddings to update the dual functions separately.
+     Getting different embeddings to update the dual functions separately.
+     Getting different embeddings to update the dual functions separately.
+     Getting different embeddings to update the dual functions separately.
+     Getting different embeddings to update the dual functions separately.
+     Getting different embeddings to update the dual functions separately.
+     Getting different embeddings to update the dual functions separately.
+     Getting different embeddings to update the dual functions separately.
+     Getting different embeddings to update the dual functions separately.
+     Getting different embeddings to update the dual functions separately.
+     Getting different embeddings to update the dual functions separately.
+[1;34mwandb[0m: 
+[1;34mwandb[0m: 🚀 View run [33mold_xenium_30pctsegleakage_19_Mar[0m at: [34m[0m
+[1;34mwandb[0m: Find logs at: [1;35mwandb/run-20260323_000738-osavxpx8/logs[0m
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@farm22-gpu0202>
+Subject: Job 969550: <30pctsegleakage> in cluster <farm22> Done
+
+Job <30pctsegleakage> was submitted from host <farm22-head1> by user <sb75> in cluster <farm22> at Sun Mar 22 15:35:21 2026
+Job was executed on host(s) <8*farm22-gpu0202>, in queue <gpu-lotfollahi>, as user <sb75> in cluster <farm22> at Sun Mar 22 23:57:39 2026
+</nfs/users/nfs_s/sb75> was used as the home directory.
+</nfs/team361/sb75/mintflow-reproducibility/analysis/benchmarking/sensitivity_analyses/eczema> was used as the working directory.
+Started at Sun Mar 22 23:57:39 2026
+Terminated at Mon Mar 23 13:56:56 2026
+Results reported at Mon Mar 23 13:56:56 2026
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+# BSUB -G team361
+# BSUB -q gpu-lotfollahi
+# BSUB -n 8
+# BSUB -M 100000
+# BSUB -R "select[mem>100000] rusage[mem=100000]"
+# BSUB -gpu "num=1:mode=exclusive_process:gmem=50000"
+# BSUB -J 30pctsegleakage
+# BSUB -o 30pctsegleakage_%J.out
+# BSUB -e 30pctsegleakage_%J.err
+
+source /etc/profile.d/modules.sh
+module load ISG/conda
+conda activate /nfs/team361/aa36/PythonEnvs_2/env_Dec27th_mintflow/
+python /nfs/team361/sb75/mintflow-reproducibility/analysis/benchmarking/sensitivity_analyses/eczema/nb2_train_30pctsegleakage.py
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   104692.00 sec.
+    Max Memory :                                 26892 MB
+    Average Memory :                             10512.98 MB
+    Total Requested Memory :                     100000.00 MB
+    Delta Memory :                               73108.00 MB
+    Max Swap :                                   -
+    Max Processes :                              6
+    Max Threads :                                60
+    Run time :                                   50346 sec.
+    Turnaround time :                            80495 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <30pctsegleakage_969550.err> for stderr output of this job.
+
