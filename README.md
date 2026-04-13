@@ -53,18 +53,20 @@ The kidney cancer survival analysis (`Fig6&S14_MintFlow_RCCanalysis_TGCASurvival
 
 ## Data & Models
 
-Preprocessed data used in the manuscript and trained models are downloadable from [GDrive](https://drive.google.com/) *(add link when available)*.
+Preprocessed data and **trained model weights** are linked from each analysis folder and summarized in [`datasets/README.md`](datasets/README.md). Large assets are hosted externally (e.g. Zenodo with a DOI, or GDrive) — see [**Reproducibility**](REPRODUCIBILITY.md) for what reviewers expect and a README template.
 
-When running analyses, ensure data paths in notebooks match your local setup or the paths documented in each analysis folder.
+When running analyses, set paths as documented in each `analysis/<name>/README.md` (or the configuration cell at the top of each notebook).
 
 ## Contributing Your Analysis
 
-We welcome contributions from co-authors. To add your analysis:
+We welcome contributions from co-authors. **Where to add your analysis:**
 
-1. Create a new subfolder under `analysis/` (e.g., `analysis/your_figure_name/`)
-2. Add a `README.md` describing the analysis and file purposes
-3. Use relative paths or document data requirements
-4. See [CONTRIBUTING.md](CONTRIBUTING.md) for the full guide
+| Add your analysis here | Example |
+|------------------------|---------|
+| `analysis/<your_folder>/` | `analysis/figure5_application/` or `analysis/breast_cancer/` | 
+| Add a `README.md` inside your folder | Describes files and data requirements |
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the full guide (naming, paths, checklist).
 
 ## Reference
 

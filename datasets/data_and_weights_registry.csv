@@ -1,0 +1,10 @@
+analysis_folder,notebook_or_script,filename,file_type,description,size_approx,gdrive_path_or_link,notes
+figure2_3_eczema,0_eczema_prep.ipynb,FILL_IN.h5ad,data,Eczema spatial data,,,
+figure2_3_eczema,2_eczema_intrinsic.ipynb,FILL_IN.pkl,weights,MintFlow eczema checkpoint,,,
+figure2_3_eczema,4_eczema_scRNA_validation.ipynb,FILL_IN.h5ad,data,Eczema scRNA-seq data,,,
+figure2_3_eczema,9_drug2cell.ipynb,FILL_IN.h5ad,data,,,,
+figure4_melanoma,0_MM_data_prep.ipynb,FILL_IN.h5ad,data,Melanoma spatial data,,,
+figure4_melanoma,2_MM_intrinsic.ipynb,FILL_IN.pkl,weights,MintFlow melanoma checkpoint,,,
+kidney_cancer,Fig5&S7-8_MintFlow_RCCanalysis_Tcellsubclustering.ipynb,FILL_IN.h5ad,data,RCC T cell data,,,
+kidney_cancer,Fig6_MintFlow_RCCanalysis_macrophagesubclustering.ipynb,FILL_IN.pkl,weights,MintFlow RCC checkpoint,,,
+kidney_cancer,Fig7_MintFlow_RCCanalysis_Macrophagepertubation.ipynb,FILL_IN.h5ad,data,RCC perturbation data,,,

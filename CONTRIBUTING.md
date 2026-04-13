@@ -2,6 +2,29 @@
 
 Thank you for contributing your analysis to the MintFlow reproducibility repository. This guide helps co-authors add their analyses in a consistent, reviewer-friendly format.
 
+## Where to Add Your Analysis
+
+**Add your analysis here:** `analysis/<your_folder_name>/`
+
+| Location | Use for |
+|----------|---------|
+| `analysis/figure5_my_application/` | New figure-specific analysis |
+| `analysis/breast_cancer/` | Application-specific analysis |
+| `analysis/benchmarking/` | Benchmarking or method comparison |
+| `datasets/` | Dataset documentation or download scripts (not large data files) |
+| `utils/` | Shared code used by multiple analyses |
+
+**Do not add** large data files (>100 MB) directly—use GDrive/Zenodo and link in your README.
+
+```
+mintflow-reproducibility/
+└── analysis/
+    ├── figure2_3_eczema/     ← existing
+    ├── figure4_melanoma/     ← existing
+    ├── kidney_cancer/        ← existing
+    └── your_new_folder/     ← ADD YOUR ANALYSIS HERE
+```
+
 ## How to Add Your Analysis
 
 ### 1. Create an Analysis Subfolder
@@ -21,13 +44,13 @@ Place your notebooks (`.ipynb`), scripts (`.py`, `.R`), and any small helper fil
 - `02_main_analysis.ipynb`
 - `Fig7_survival_analysis.R`
 
-### 3. Add a README
+### 3. Add a README (include reproducibility)
 
 Create a `README.md` in your subfolder with:
 
 - **Brief description** of the analysis and which figure(s) it produces
 - **Table of files** with short descriptions
-- **Data requirements**: paths, formats, or links to external data
+- **Reproducibility:** links to **data** and **model weights** (see [REPRODUCIBILITY.md](REPRODUCIBILITY.md))
 - **Dependencies**: any packages beyond the main environment (e.g., R packages)
 
 Example:
@@ -42,10 +65,18 @@ Brief description of what this analysis does.
 | `01_prep.ipynb` | Data preprocessing |
 | `02_analysis.ipynb` | Main analysis producing Figure X |
 
-## Data
+## Reproducibility
 
-- Input: `path/to/adata.h5ad` (or GDrive link)
-- Output: Figures Xa, Xb
+### Data
+- **Download:** [Zenodo DOI or URL](https://...)
+- **Files used:** `adata.h5ad`
+
+### Model weights
+- **Checkpoint:** [URL to MintFlow or other weights](https://...)
+- **Software:** `mintflow==x.y.z` (or git commit)
+
+## Environment
+- `conda env create -f ../../envs/environment.yaml`
 ```
 
 ### 4. Use Portable Paths
@@ -69,9 +100,11 @@ Brief description of what this analysis does.
 
 - [ ] New subfolder under `analysis/`
 - [ ] `README.md` with description and file table
-- [ ] Data requirements documented
-- [ ] Paths are documented or configurable
+- [ ] **Data:** stable download link(s) + filenames (see [REPRODUCIBILITY.md](REPRODUCIBILITY.md))
+- [ ] **Model weights:** link or Zenodo record for checkpoints used in figures
+- [ ] Paths are documented or configurable (e.g. `DATA_DIR` at top of notebook)
 - [ ] Notebooks run (or known issues noted)
+- [ ] Optional: row added to [`datasets/README.md`](datasets/README.md) central index
 
 ## Questions?
 
