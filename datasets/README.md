@@ -4,32 +4,21 @@ Large files (`.h5ad` data, `.pkl` model weights) stay **outside Git**. They are 
 
 ## Registry
 
-The **single source of truth** for all data and weights is:
+The list of **all data files and model weights** required to reproduce each notebook is maintained in the following Google Sheet:
 
-- **[`data_and_weights_registry.xlsx`](data_and_weights_registry.xlsx)** (Excel file in this folder)
+**[Data & Weights Registry (Google Sheet)](https://docs.google.com/spreadsheets/d/1MZ575oXGSmGBPvi-qBCIgjDxeWn2tQmCxVbO9LWlhNs/edit?usp=sharing)**
 
-Each row maps a notebook to the exact files it needs (data or weights), with download links.
+Each row maps a notebook to the exact `.h5ad` data file and `.pkl` model weights it needs to run.
 
 ### How to use
 
-1. Open the Excel file
+1. Open the [Google Sheet](https://docs.google.com/spreadsheets/d/1MZ575oXGSmGBPvi-qBCIgjDxeWn2tQmCxVbO9LWlhNs/edit?usp=sharing)
 2. Find the row(s) for the notebook you want to run
-3. Download the listed files from the GDrive link
+3. Download the listed data and weight files from the provided links
 4. Place them in the path shown (or set `DATA_DIR` / `MODEL_CKPT` at the top of the notebook)
 
-### For co-authors adding files
+### For co-authors
 
-Add one row per file (`.h5ad` or `.pkl`) to the Excel sheet:
-
-| Column | What to fill in |
-|--------|----------------|
-| `analysis_folder` | Your folder name under `analysis/` |
-| `notebook_or_script` | Which notebook needs this file |
-| `filename` | Exact filename (e.g. `adata_eczema.h5ad`) |
-| `file_type` | `data` or `weights` |
-| `description` | Short description |
-| `size_approx` | e.g. `2.3 GB` |
-| `gdrive_path_or_link` | Subfolder path in GDrive or direct link |
-| `notes` | Any extra info (version, access restrictions) |
+Edit the Google Sheet directly to add or update entries for your analysis notebooks.
 
 **Guidance:** See [REPRODUCIBILITY.md](../REPRODUCIBILITY.md) for hosting options and access policies.

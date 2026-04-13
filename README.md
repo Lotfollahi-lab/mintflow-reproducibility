@@ -51,11 +51,11 @@ mintflow-reproducibility/
 
 The kidney cancer survival analysis (`Fig6&S14_MintFlow_RCCanalysis_TGCASurvival.R`) requires R. Install R and the required packages as indicated in the script.
 
-## Data & Models
+## Data & Model Weights
 
-Preprocessed data and **trained model weights** are linked from each analysis folder and summarized in [`datasets/README.md`](datasets/README.md). Large assets are hosted externally (e.g. Zenodo with a DOI, or GDrive) — see [**Reproducibility**](REPRODUCIBILITY.md) for what reviewers expect and a README template.
+The list of all data files (`.h5ad`) and model weights (`.pkl`) required for each notebook is available in our **[Data & Weights Registry (Google Sheet)](https://docs.google.com/spreadsheets/d/1MZ575oXGSmGBPvi-qBCIgjDxeWn2tQmCxVbO9LWlhNs/edit?usp=sharing)**.
 
-When running analyses, set paths as documented in each `analysis/<name>/README.md` (or the configuration cell at the top of each notebook).
+To reproduce a specific notebook, find its row in the sheet, download the listed files, and set the paths at the top of the notebook. See [`datasets/README.md`](datasets/README.md) for details and [REPRODUCIBILITY.md](REPRODUCIBILITY.md) for access policies.
 
 ## Contributing Your Analysis
 
