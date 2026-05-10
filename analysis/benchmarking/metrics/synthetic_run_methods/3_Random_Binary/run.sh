@@ -17,7 +17,7 @@ python run_RandomBinary.py \
 python run_RandomBinary.py \
 --fname_adata "/nfs/team361/aa36/OnGit/nichecompass-reproducibility/analysis/data_simulation/WD/sim2sim1_2000genes_50000locs_strongincrements/sim1_2000genes_50000locs_strongincrements.h5ad" \
 --fname_adata_int "/nfs/team361/aa36/OnGit/nichecompass-reproducibility/analysis/data_simulation/WD/sim2sim1_2000genes_50000locs_strongincrements/intrinsicpartof_sim1_2000genes_50000locs_strongincrements.h5ad" \
---str_prefix_runname 'Run_Sim1' \
+--str_prefix_runname 'Run_Sim2' \
 --flag_drop_homogregions 'False' \
 
 
@@ -27,7 +27,7 @@ python run_RandomBinary.py \
 python run_RandomBinary.py \
 --fname_adata "/nfs/team361/aa36/OnGit/nichecompass-reproducibility/analysis/data_simulation/WD/sim3sim1_2000genes_50000locs_strongincrements/sim1_2000genes_50000locs_strongincrements.h5ad" \
 --fname_adata_int "/nfs/team361/aa36/OnGit/nichecompass-reproducibility/analysis/data_simulation/WD/sim3sim1_2000genes_50000locs_strongincrements/intrinsicpartof_sim1_2000genes_50000locs_strongincrements.h5ad" \
---str_prefix_runname 'Run_Sim1' \
+--str_prefix_runname 'Run_Sim3' \
 --flag_drop_homogregions 'False' \
 
 
@@ -37,7 +37,7 @@ python run_RandomBinary.py \
 python run_RandomBinary.py \
 --fname_adata "/nfs/team361/aa36/OnGit/nichecompass-reproducibility/analysis/data_simulation/WD/sim4sim1_2000genes_50000locs_strongincrements/sim1_2000genes_50000locs_strongincrements.h5ad" \
 --fname_adata_int "/nfs/team361/aa36/OnGit/nichecompass-reproducibility/analysis/data_simulation/WD/sim4sim1_2000genes_50000locs_strongincrements/intrinsicpartof_sim1_2000genes_50000locs_strongincrements.h5ad" \
---str_prefix_runname 'Run_Sim1' \
+--str_prefix_runname 'Run_Sim4' \
 --flag_drop_homogregions 'False' \
 
 
@@ -47,7 +47,7 @@ python run_RandomBinary.py \
 python run_RandomBinary.py \
 --fname_adata "/nfs/team361/aa36/OnGit/nichecompass-reproducibility/analysis/data_simulation/WD/sim5sim1_2000genes_50000locs_strongincrements/sim1_2000genes_50000locs_strongincrements.h5ad" \
 --fname_adata_int "/nfs/team361/aa36/OnGit/nichecompass-reproducibility/analysis/data_simulation/WD/sim5sim1_2000genes_50000locs_strongincrements/intrinsicpartof_sim1_2000genes_50000locs_strongincrements.h5ad" \
---str_prefix_runname 'Run_Sim1' \
+--str_prefix_runname 'Run_Sim5' \
 --flag_drop_homogregions 'False' \
 
 
