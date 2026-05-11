@@ -1,0 +1,15 @@
+
+
+
+# For each section, specifies the pkl file name in the DB of metric2 numbers.
+
+
+"4_CRC_VisiumHD_Publis": "dataset_4_CRC_VisiumHD_Publis.pkl"
+
+"Z_AD_10sections_MintFlowPreprint": "dataset_Z_AD_10sections_MintFlowPreprint.pkl"
+
+"1024HVGs_1_RCC": 'dataset_1_RCC.pkl'
+
+"SlideSeq_Kidney_puck01": "NA"
+
+

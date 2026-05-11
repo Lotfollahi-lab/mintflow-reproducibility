@@ -1,0 +1,87 @@
+
+
+# The goal is to have (i) per-section benchmakrs, so MEFISTO is runnable and (ii) multi-section runs where SimVI is still applicable, but mefisto isn't.s
+
+"1_RCC":
+- /nfs/team361/aa36/OnGit/mintflow-benchmarking/Metrics/1_Disentanglement/3_Actual_Benchmarks/NonGit/ModifiedAnndataObjects/1_RCC/CV2-KID-0-FT-1.h5ad  # 26024
+- /nfs/team361/aa36/OnGit/mintflow-benchmarking/Metrics/1_Disentanglement/3_Actual_Benchmarks/NonGit/ModifiedAnndataObjects/1_RCC/CV2-KID-0-FT-2.h5ad  # 27273
+- /nfs/team361/aa36/OnGit/mintflow-benchmarking/Metrics/1_Disentanglement/3_Actual_Benchmarks/NonGit/ModifiedAnndataObjects/1_RCC/CV2-KID-0-FO-1.h5ad  # 29311
+- /nfs/team361/aa36/OnGit/mintflow-benchmarking/Metrics/1_Disentanglement/3_Actual_Benchmarks/NonGit/ModifiedAnndataObjects/1_RCC/CV6-KID-0-FT-4.h5ad  # 26424
+
+# The original ones don't contain raw counts in `adata.X` ==> had to duplicate and correct.
+# - /nfs/team361/dj17/MintFlow_2025/xenium_RCC/annotated_data/CV2-KID-0-FT-1.h5ad  # 26024
+# - /nfs/team361/dj17/MintFlow_2025/xenium_RCC/annotated_data/CV2-KID-0-FT-2.h5ad  # 27273
+# - /nfs/team361/dj17/MintFlow_2025/xenium_RCC/annotated_data/CV2-KID-0-FO-1.h5ad  # 29311
+# - /nfs/team361/dj17/MintFlow_2025/xenium_RCC/annotated_data/CV6-KID-0-FT-4.h5ad  # 26424
+
+
+"2_Psoriasis":
+- /nfs/team361/cl35/DatasetPsoriasis/CE3-SKI-24-FO-1-S22-A1_Lesional_Psoriasis.h5ad  # 22700
+- /nfs/team361/cl35/DatasetPsoriasis/CE4-SKI-27-FO-4-S22-A2_Lesional_Psoriasis.h5ad  # 21715
+- /nfs/team361/cl35/DatasetPsoriasis/CE5-SKI-28-FO-1-S22-A1_Lesional_Psoriasis.h5ad  # 13261
+- /nfs/team361/cl35/DatasetPsoriasis/CE6-SKI-28-FO-4-S22-A1_Lesional_Psoriasis.h5ad  # 9287
+
+
+
+"3_AD_usedin_TRIPSO":
+- /nfs/team361/cl35/DatasetAtopicDermatitis/BK23-SKI-27-FO-1_Lesional_Baseline_AD.h5ad  # 28738
+- /nfs/team361/cl35/DatasetAtopicDermatitis/BK22-SKI-27-FO-1_Lesional_AD.h5ad  # 22179
+- /nfs/team361/cl35/DatasetAtopicDermatitis/X0027131_Region_7_Lesional_Baseline_AD.h5ad  # 17831
+
+
+"4_CRC_VisiumHD_Publis":
+- /nfs/team361/ms83/data/CRC/visiumHD_mintflow/raw_data/adata_sc_P1_rawformintflow.h5ad  # 235530
+
+
+"6_XXX_Skin":  # has already around 1200 genes
+- /nfs/team361/ls34/inflow/outputs/dataset1/tissue_section_forMintFlow_5.h5ad  # 33391
+- /nfs/team361/ls34/inflow/outputs/dataset1/tissue_section_forMintFlow_14.h5ad  # 36882
+- /nfs/team361/ls34/inflow/outputs/dataset1/tissue_section_forMintFlow_6.h5ad  # 29519
+- /nfs/team361/ls34/inflow/outputs/dataset1/tissue_section_forMintFlow_7.h5ad  # 29148
+
+"Z_AD_10sections_MintFlowPreprint":  # has 1032 genes
+- /nfs/team361/aa36/OnGit/inflow-reproducibility/Analysis/15_10Samples_BEACON/0_PreProcessing/Outputs_Preprocessing/nb1_preprocessing_V1/PreProcessingDatedAt-13-01-2025-15-02-45/BK23_Non_lesional_Baseline.h5ad  # 18244
+- /nfs/team361/aa36/OnGit/inflow-reproducibility/Analysis/15_10Samples_BEACON/0_PreProcessing/Outputs_Preprocessing/nb1_preprocessing_V1/PreProcessingDatedAt-13-01-2025-15-02-45/BK23_Lesional_Baseline.h5ad  # 25625
+- /nfs/team361/aa36/OnGit/inflow-reproducibility/Analysis/15_10Samples_BEACON/0_PreProcessing/Outputs_Preprocessing/nb1_preprocessing_V1/PreProcessingDatedAt-13-01-2025-15-02-45/BK30_Day_14.h5ad  # 30861
+- /nfs/team361/aa36/OnGit/inflow-reproducibility/Analysis/15_10Samples_BEACON/0_PreProcessing/Outputs_Preprocessing/nb1_preprocessing_V1/PreProcessingDatedAt-13-01-2025-15-02-45/BK22_Lesional_Baseline.h5ad  # 21656
+
+
+"Z_Melanoma_MintFlowPreprint":  # has 1024 genes
+- /nfs/team361/aa36/OnGit/inflow-reproducibility/Analysis/18_Melanoma_Jan20Runs/NonGit/Data/preprocBy_nb1_preprocessing_V2.h5ad  # 98749
+
+
+"1024HVGs_1_RCC":
+- /nfs/team361/aa36/OnGit/mintflow-benchmarking/Metrics/1_Disentanglement/3_Actual_Benchmarks/1_MintFlow/NonGit/DatasetsWithHVGs/Ds_1_RCC/CV2-KID-0-FT-1.h5ad  # 26024
+- /nfs/team361/aa36/OnGit/mintflow-benchmarking/Metrics/1_Disentanglement/3_Actual_Benchmarks/1_MintFlow/NonGit/DatasetsWithHVGs/Ds_1_RCC/CV2-KID-0-FT-2.h5ad  # 27273
+- /nfs/team361/aa36/OnGit/mintflow-benchmarking/Metrics/1_Disentanglement/3_Actual_Benchmarks/1_MintFlow/NonGit/DatasetsWithHVGs/Ds_1_RCC/CV2-KID-0-FO-1.h5ad  # 29311
+- /nfs/team361/aa36/OnGit/mintflow-benchmarking/Metrics/1_Disentanglement/3_Actual_Benchmarks/1_MintFlow/NonGit/DatasetsWithHVGs/Ds_1_RCC/CV6-KID-0-FT-4.h5ad  # 26424
+
+
+"1024HVGs_2_Psoriasis":
+- /nfs/team361/aa36/OnGit/mintflow-benchmarking/Metrics/1_Disentanglement/3_Actual_Benchmarks/1_MintFlow/NonGit/DatasetsWithHVGs/Ds_2_Psoriasis/CE3-SKI-24-FO-1-S22-A1_Lesional_Psoriasis.h5ad  # 22700
+- /nfs/team361/aa36/OnGit/mintflow-benchmarking/Metrics/1_Disentanglement/3_Actual_Benchmarks/1_MintFlow/NonGit/DatasetsWithHVGs/Ds_2_Psoriasis/CE4-SKI-27-FO-4-S22-A2_Lesional_Psoriasis.h5ad  # 21715
+- /nfs/team361/aa36/OnGit/mintflow-benchmarking/Metrics/1_Disentanglement/3_Actual_Benchmarks/1_MintFlow/NonGit/DatasetsWithHVGs/Ds_2_Psoriasis/CE5-SKI-28-FO-1-S22-A1_Lesional_Psoriasis.h5ad  # 13261
+- /nfs/team361/aa36/OnGit/mintflow-benchmarking/Metrics/1_Disentanglement/3_Actual_Benchmarks/1_MintFlow/NonGit/DatasetsWithHVGs/Ds_2_Psoriasis/CE6-SKI-28-FO-4-S22-A1_Lesional_Psoriasis.h5ad  # 9287
+
+
+"1024HVGs_3_AD_usedin_TRIPSO":
+- /nfs/team361/aa36/OnGit/mintflow-benchmarking/Metrics/1_Disentanglement/3_Actual_Benchmarks/1_MintFlow/NonGit/DatasetsWithHVGs/Ds_3_AD_usedin_TRIPSO/BK23-SKI-27-FO-1_Lesional_Baseline_AD.h5ad  # 28738
+- /nfs/team361/aa36/OnGit/mintflow-benchmarking/Metrics/1_Disentanglement/3_Actual_Benchmarks/1_MintFlow/NonGit/DatasetsWithHVGs/Ds_3_AD_usedin_TRIPSO/BK22-SKI-27-FO-1_Lesional_AD.h5ad  # 22179
+- /nfs/team361/aa36/OnGit/mintflow-benchmarking/Metrics/1_Disentanglement/3_Actual_Benchmarks/1_MintFlow/NonGit/DatasetsWithHVGs/Ds_3_AD_usedin_TRIPSO/X0027131_Region_7_Lesional_Baseline_AD.h5ad  # 17831
+
+"1024HVGs_4_CRC_VisiumHD_Publis":
+- /nfs/team361/aa36/OnGit/mintflow-benchmarking/Metrics/1_Disentanglement/3_Actual_Benchmarks/1_MintFlow/NonGit/DatasetsWithHVGs/Ds_4_CRC_VisiumHD_Publis/adata_sc_P1_rawformintflow.h5ad  # 235530
+
+
+"SlideSeq_Kidney_puck01":
+- "/nfs/team361/aa36/OnGit/mintflow-benchmarking/Metrics/1_Disentanglement/3_Actual_Benchmarks/NonGit/ModifiedAnndataObjects/SlideseqKidney/adata_puck_01_rawformintflow_7K_svg.h5ad"
+
+"SlideSeq_Kidney_puck02":
+- "/nfs/team361/aa36/OnGit/mintflow-benchmarking/Metrics/1_Disentanglement/3_Actual_Benchmarks/NonGit/ModifiedAnndataObjects/SlideseqKidney/adata_puck_02_rawformintflow_7K_svg.h5ad"
+
+"SlideSeq_Kidney_puck03":
+- "/nfs/team361/aa36/OnGit/mintflow-benchmarking/Metrics/1_Disentanglement/3_Actual_Benchmarks/NonGit/ModifiedAnndataObjects/SlideseqKidney/adata_puck_03_rawformintflow_7K_svg.h5ad"
+
+"SlideSeq_Kidney_puck05":
+- "/nfs/team361/aa36/OnGit/mintflow-benchmarking/Metrics/1_Disentanglement/3_Actual_Benchmarks/NonGit/ModifiedAnndataObjects/SlideseqKidney/adata_puck_05_rawformintflow_7K_svg.h5ad"
+

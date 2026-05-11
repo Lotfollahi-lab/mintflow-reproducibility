@@ -1,0 +1,31 @@
+
+
+
+# contains the color pallete for different methods
+
+
+# "MintFlow": '#ca0031'
+# "MEFISTO": '#4d82ff'
+# "SIMVI": '#00a60c'
+# "NiCo": '#ff31db'
+# "random_uniform": '#28bec2'
+# "random_binary": '#f78204'
+# "STAGATE": '#456569'
+# "NCEM": '#8e10ca'
+# "GraphST": '#b29aa6'
+# "CellCharter": '#7d5508'
+
+"MintFlow": '#ca0031'
+"STAGATE": '#4d82ff'
+"SIMVI": '#00a60c'
+"GraphST": '#ff31db'
+"random_uniform": '#28bec2'
+"random_binary": '#f78204'
+"MEFISTO": '#456569'
+"NCEM": '#8e10ca'
+"NiCo": '#b29aa6'
+"CellCharter": '#7d5508'
+
+
+
+

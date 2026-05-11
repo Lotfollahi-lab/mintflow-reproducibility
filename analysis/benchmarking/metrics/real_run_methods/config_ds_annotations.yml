@@ -1,0 +1,34 @@
+
+
+# This file contains dataset annotations, i.e. (i) obskey cell type (ii) obskey x, (ii) obskey y, (iv) obskey unique slide number
+
+
+"4_CRC_VisiumHD_Publis":
+  "obskey_celltype": "DeconvolutionLabel1"
+  "obskey_X": "X"
+  "obskey_Y": "Y"
+  "obskey_UID": "patient"
+
+
+"Z_AD_10sections_MintFlowPreprint":
+  "obskey_celltype": "broad_celltypes"
+  "obskey_X": "x_centroid"
+  "obskey_Y": "y_centroid"
+  "obskey_UID": "sample_id"
+
+
+"1024HVGs_1_RCC":
+  "obskey_celltype": "level_2_cell_type"
+  "obskey_X": "x_centroid"
+  "obskey_Y": "y_centroid"
+  "obskey_UID": "batch"
+
+
+"SlideSeq_Kidney_puck01":
+  "obskey_celltype": "scANVI_pred"
+  "obskey_X": "x"
+  "obskey_Y": "y"
+  "obskey_UID": "batch"
+
+
+
