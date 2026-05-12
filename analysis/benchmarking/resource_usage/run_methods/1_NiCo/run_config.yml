@@ -1,0 +1,47 @@
+
+
+
+dict_numcells_to_fnameadata:
+  10000: "/nfs/team361/aa36/OnGit/mintflow-benchmarking/Metrics/4_TimingAndMemoryUsage/0_Data/NonGit/2_ProcessedData/NumGenes_1000/adata_numcells_10000.h5ad"
+  20000: "/nfs/team361/aa36/OnGit/mintflow-benchmarking/Metrics/4_TimingAndMemoryUsage/0_Data/NonGit/2_ProcessedData/NumGenes_1000/adata_numcells_20000.h5ad"
+  30000: "/nfs/team361/aa36/OnGit/mintflow-benchmarking/Metrics/4_TimingAndMemoryUsage/0_Data/NonGit/2_ProcessedData/NumGenes_1000/adata_numcells_30000.h5ad"
+  40000: "/nfs/team361/aa36/OnGit/mintflow-benchmarking/Metrics/4_TimingAndMemoryUsage/0_Data/NonGit/2_ProcessedData/NumGenes_1000/adata_numcells_40000.h5ad"
+  50000: "/nfs/team361/aa36/OnGit/mintflow-benchmarking/Metrics/4_TimingAndMemoryUsage/0_Data/NonGit/2_ProcessedData/NumGenes_1000/adata_numcells_50000.h5ad"
+  60000: "/nfs/team361/aa36/OnGit/mintflow-benchmarking/Metrics/4_TimingAndMemoryUsage/0_Data/NonGit/2_ProcessedData/NumGenes_1000/adata_numcells_60000.h5ad"
+  70000: "/nfs/team361/aa36/OnGit/mintflow-benchmarking/Metrics/4_TimingAndMemoryUsage/0_Data/NonGit/2_ProcessedData/NumGenes_1000/adata_numcells_70000.h5ad"
+  80000: "/nfs/team361/aa36/OnGit/mintflow-benchmarking/Metrics/4_TimingAndMemoryUsage/0_Data/NonGit/2_ProcessedData/NumGenes_1000/adata_numcells_80000.h5ad"
+  90000: "/nfs/team361/aa36/OnGit/mintflow-benchmarking/Metrics/4_TimingAndMemoryUsage/0_Data/NonGit/2_ProcessedData/NumGenes_1000/adata_numcells_90000.h5ad"
+  100000: "/nfs/team361/aa36/OnGit/mintflow-benchmarking/Metrics/4_TimingAndMemoryUsage/0_Data/NonGit/2_ProcessedData/NumGenes_1000/adata_numcells_100000.h5ad"
+  1000000: "/nfs/team361/aa36/OnGit/mintflow-benchmarking/Metrics/4_TimingAndMemoryUsage/0_Data/NonGit/2_ProcessedData/NumGenes_1000/adata_numcells_1000000.h5ad"
+
+
+# shared arguments between different dataset sizes, i.e. the ones that do not vary with number of cells.
+py_shared_args:
+  num_factors: 5
+  annotation_slot: level_2_cell_type
+
+
+
+
+# dataset size specific args, i.e. the ones that vary with number of cells.
+py_nonshared_args:
+  path_workspace:
+    10000: './NonGit/Wspace_10000/'
+    20000: './NonGit/Wspace_20000/'
+    30000: './NonGit/Wspace_30000/'
+    40000: './NonGit/Wspace_40000/'
+    50000: './NonGit/Wspace_50000/'
+    60000: './NonGit/Wspace_60000/'
+    70000: './NonGit/Wspace_70000/'
+    80000: './NonGit/Wspace_80000/'
+    90000: './NonGit/Wspace_90000/'
+    100000: './NonGit/Wspace_100000/'
+    1000000: './NonGit/Wspace_1000000/'
+
+
+
+
+
+
+
+
