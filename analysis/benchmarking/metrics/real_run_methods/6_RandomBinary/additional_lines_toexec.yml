@@ -1,0 +1,9 @@
+
+
+
+"4_CRC_VisiumHD_Publis":  |
+    for k in config_data_train['list_tissue'].keys():
+        config_data_train['list_tissue'][k]['config_neighbourhood_graph']['delaunay'] = 'True'
+        config_data_evaluation['list_tissue'][k]['config_neighbourhood_graph']['delaunay'] = 'True'
+
+

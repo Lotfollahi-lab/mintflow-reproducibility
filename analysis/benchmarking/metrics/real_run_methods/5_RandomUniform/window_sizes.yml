@@ -1,0 +1,30 @@
+
+
+
+
+# Contains the window sizes for each tissue section.
+
+
+"4_CRC_VisiumHD_Publis":
+- '/nfs/team361/ms83/data/CRC/visiumHD_mintflow/raw_data/adata_sc_P1_rawformintflow.h5ad': 7  # NOTE: set delaunary to True for this, to avoid having isolated cells.
+
+"Z_AD_10sections_MintFlowPreprint":
+- '/nfs/team361/aa36/OnGit/inflow-reproducibility/Analysis/15_10Samples_BEACON/0_PreProcessing/Outputs_Preprocessing/nb1_preprocessing_V1/PreProcessingDatedAt-13-01-2025-15-02-45/BK23_Non_lesional_Baseline.h5ad': 1200 
+- '/nfs/team361/aa36/OnGit/inflow-reproducibility/Analysis/15_10Samples_BEACON/0_PreProcessing/Outputs_Preprocessing/nb1_preprocessing_V1/PreProcessingDatedAt-13-01-2025-15-02-45/BK23_Lesional_Baseline.h5ad': 1200
+- '/nfs/team361/aa36/OnGit/inflow-reproducibility/Analysis/15_10Samples_BEACON/0_PreProcessing/Outputs_Preprocessing/nb1_preprocessing_V1/PreProcessingDatedAt-13-01-2025-15-02-45/BK30_Day_14.h5ad': 1200
+- '/nfs/team361/aa36/OnGit/inflow-reproducibility/Analysis/15_10Samples_BEACON/0_PreProcessing/Outputs_Preprocessing/nb1_preprocessing_V1/PreProcessingDatedAt-13-01-2025-15-02-45/BK22_Lesional_Baseline.h5ad': 1200
+
+
+"1024HVGs_1_RCC":
+- '/nfs/team361/aa36/OnGit/mintflow-benchmarking/Metrics/1_Disentanglement/3_Actual_Benchmarks/1_MintFlow/NonGit/DatasetsWithHVGs/Ds_1_RCC/CV2-KID-0-FT-1.h5ad': 1100
+- '/nfs/team361/aa36/OnGit/mintflow-benchmarking/Metrics/1_Disentanglement/3_Actual_Benchmarks/1_MintFlow/NonGit/DatasetsWithHVGs/Ds_1_RCC/CV2-KID-0-FT-2.h5ad': 1100
+- '/nfs/team361/aa36/OnGit/mintflow-benchmarking/Metrics/1_Disentanglement/3_Actual_Benchmarks/1_MintFlow/NonGit/DatasetsWithHVGs/Ds_1_RCC/CV2-KID-0-FO-1.h5ad': 1200
+- '/nfs/team361/aa36/OnGit/mintflow-benchmarking/Metrics/1_Disentanglement/3_Actual_Benchmarks/1_MintFlow/NonGit/DatasetsWithHVGs/Ds_1_RCC/CV6-KID-0-FT-4.h5ad': 1100
+
+
+"SlideSeq_Kidney_puck01":
+- "/nfs/team361/aa36/OnGit/mintflow-benchmarking/Metrics/1_Disentanglement/3_Actual_Benchmarks/NonGit/ModifiedAnndataObjects/SlideseqKidney/adata_puck_01_rawformintflow_7K_svg.h5ad": 400
+
+
+
+
