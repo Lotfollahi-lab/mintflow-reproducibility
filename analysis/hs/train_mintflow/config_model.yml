@@ -1,0 +1,143 @@
+num_graph_hops: 1
+dict_pname_to_scaleandunweighted: z#1.0#True&sout#1.0#True&sin#0.1#True&xbar_int#0.1#True&xbar_spl#0.1#True&x#0.1#True
+str_mode_headxint_headxspl_headboth_twosep: headxspl
+dim_sz: 100
+str_listdimhidden_dec2: ''
+flag_zinbdec_endswith_softmax: 'True'
+flag_zinbdec_endswith_softplus: 'False'
+flag_use_layernorm_dec2: 'True'
+zi_probsetto0_int: 0.0001
+zi_probsetto0_spl: 0.0001
+initval_thetanegbin_int: '3.0'
+flag_train_negbintheta_int: 'True'
+negbintheta_int_clamp_minmax: 1.0_10.0
+initval_thetanegbin_spl: '3.0'
+flag_train_negbintheta_spl: 'True'
+negbintheta_spl_clamp_minmax: 1.0_10.0
+flag_use_int_u: 'True'
+flag_use_spl_u: 'True'
+flag_detach_mu_u_int: 'False'
+flag_detach_mu_u_spl: 'True'
+upperbound_cov_u: 1.0
+lowerbound_cov_u: 0.01
+flag_enable_batchtoken_flowmodule: 'False'
+args_list_adjmatloss: ''
+CTNCC_usage_moduledisent: '{''CT'':modules.gnn_disentangler.ArchInsertionPoint.BACKBONE,
+  ''NCC'':modules.gnn_disentangler.ArchInsertionPoint.HEADSPL}'
+dict_qname_to_scaleandunweighted: impanddisentgl_int#0.1#True&impanddisentgl_spl#0.0#True&varphi_enc_int#0.0#True&varphi_enc_spl#0.0#True&z#0.0#True&sin#0.0#True&sout#0.0#True
+clipval_cov_noncentralnodes: 0.1
+std_minval_finalclip: 0.01
+std_maxval_finalclip: 0.01
+flag_use_layernorm_disentangler_enc1: 'True'
+flag_use_dropout_disentangler_enc1: 'True'
+flag_enable_batchtoken_disentangler: 'True'
+coef_flowmatchingloss: 0.0
+flowmatching_mode_samplex0: ModeSampleX0.FROMINFLOW
+flowmatching_mode_minibatchper: ModeMinibatchPerm.RANDOM
+kwargs_otsampler: '{''method'':''exact''}'
+fmloss_combinationmode: FMLossCombinationMode.ZSIN_SEPARATE
+flowmatching_mode_timesched: ModeTimeSched.UNIFORM
+flowmatching_sigma: 0.0
+flowmatching_mode_fmloss: ModeFMLoss.NOISEDIR
+neuralODE_t_num_steps: 10
+flag_use_layernorm_dimreduction_enc2: 'True'
+flag_enable_batchtoken_encxbar: 'True'
+arch_module_encoder_X2Xbar: "torch.nn.Sequential(\n  torch.nn.Linear(dict_varname_to_dim['x']\
+  \ + kwargs_genmodel['dict_varname_to_dim']['BatchEmb'], dict_varname_to_dim['x']//10),\n\
+  \  torch.nn.LayerNorm(dict_varname_to_dim['x']//10) if(locals()['config_model']['flag_use_layernorm_dimreduction_enc2'])\
+  \ else modules.mlp.Identity(),\n  torch.nn.ReLU(),\n  torch.nn.Linear(dict_varname_to_dim['x']//10,\
+  \ dict_varname_to_dim['xbar']),\n  torch.nn.LayerNorm(dict_varname_to_dim['xbar'])\
+  \ if(locals()['config_model']['flag_use_layernorm_dimreduction_enc2']) else modules.mlp.Identity(),\n\
+  \  torch.nn.ReLU()\n)\n"
+flag_use_layernorm_cond4flow_enc3: 'True'
+flag_use_dropout_cond4flow_enc3: 'True'
+enc3_encZ_list_dim_hidden: '[50]'
+enc3_encSin_list_dim_hidden: '[50]'
+enc3_encSout_list_dim_hidden: '[50]'
+CTNCC_usage_modulecond4flow: '{''z'':[True, False], ''sout'':[True, False], ''sin'':[False,
+  True]}'
+str_modez2notNCCloss_regorclsorwassdist: wassdist
+module_predictor_z2notNCC: "PredictorPerCT(\n  list_modules=[\n      torch.nn.Sequential(\n\
+  \          torch.nn.Linear(kwargs_genmodel['dict_varname_to_dim']['z'], kwargs_genmodel['dict_varname_to_dim']['z']//2),\n\
+  \          torch.nn.LayerNorm(kwargs_genmodel['dict_varname_to_dim']['z']//2),\n\
+  \          torch.nn.ReLU(),\n          torch.nn.Linear(kwargs_genmodel['dict_varname_to_dim']['z']//2,\
+  \ kwargs_genmodel['dict_varname_to_dim']['z']//2),\n          torch.nn.LayerNorm(kwargs_genmodel['dict_varname_to_dim']['z']//2),\n\
+  \          torch.nn.ReLU(),\n          torch.nn.Linear(kwargs_genmodel['dict_varname_to_dim']['z']//2,\
+  \ kwargs_genmodel['dict_varname_to_dim']['z']//2),\n          torch.nn.LayerNorm(kwargs_genmodel['dict_varname_to_dim']['z']//2),\n\
+  \          torch.nn.ReLU(),\n          torch.nn.Linear(kwargs_genmodel['dict_varname_to_dim']['z']//2,\
+  \ list_slice.list_slice[0]._global_num_CT, bias=False),\n          torch.nn.Tanh()\
+  \ if(config_model['str_modez2notNCCloss_regorclsorwassdist'] in ['cls', 'wassdist'])\
+  \ else BASE_PATH.modules.mlp.Identity()\n      ) for _ in range(list_slice.list_slice[0]._global_num_CT)\n\
+  \  ]\n)\n"
+module_predictor_xbarint2notNCC: "PredictorPerCT(\n  list_modules=[\n      torch.nn.Sequential(\n\
+  \          torch.nn.Linear(kwargs_genmodel['dict_varname_to_dim']['z'], kwargs_genmodel['dict_varname_to_dim']['z']//2),\n\
+  \          torch.nn.LayerNorm(kwargs_genmodel['dict_varname_to_dim']['z']//2),\n\
+  \          torch.nn.ReLU(),\n          torch.nn.Linear(kwargs_genmodel['dict_varname_to_dim']['z']//2,\
+  \ kwargs_genmodel['dict_varname_to_dim']['z']//2),\n          torch.nn.LayerNorm(kwargs_genmodel['dict_varname_to_dim']['z']//2),\n\
+  \          torch.nn.ReLU(),\n          torch.nn.Linear(kwargs_genmodel['dict_varname_to_dim']['z']//2,\
+  \ kwargs_genmodel['dict_varname_to_dim']['z']//2),\n          torch.nn.LayerNorm(kwargs_genmodel['dict_varname_to_dim']['z']//2),\n\
+  \          torch.nn.ReLU(),\n          torch.nn.Linear(kwargs_genmodel['dict_varname_to_dim']['z']//2,\
+  \ list_slice.list_slice[0]._global_num_CT, bias=False),\n          torch.nn.Tanh()\
+  \ if(config_model['str_modez2notNCCloss_regorclsorwassdist'] in ['cls', 'wassdist'])\
+  \ else BASE_PATH.modules.mlp.Identity()\n      ) for _ in range(list_slice.list_slice[0]._global_num_CT)\n\
+  \  ]\n)\n"
+module_predictor_xbarint2notBatchID: "PredictorBatchID(\n  list_modules=[\n      torch.nn.Sequential(\n\
+  \          torch.nn.Linear(kwargs_genmodel['dict_varname_to_dim']['z'], kwargs_genmodel['dict_varname_to_dim']['z']//2),\n\
+  \          torch.nn.LayerNorm(kwargs_genmodel['dict_varname_to_dim']['z']//2),\n\
+  \          torch.nn.ReLU(),\n          torch.nn.Linear(kwargs_genmodel['dict_varname_to_dim']['z']//2,\
+  \ kwargs_genmodel['dict_varname_to_dim']['z']//2),\n          torch.nn.LayerNorm(kwargs_genmodel['dict_varname_to_dim']['z']//2),\n\
+  \          torch.nn.ReLU(),\n          torch.nn.Linear(kwargs_genmodel['dict_varname_to_dim']['z']//2,\
+  \ kwargs_genmodel['dict_varname_to_dim']['z']//2),\n          torch.nn.LayerNorm(kwargs_genmodel['dict_varname_to_dim']['z']//2),\n\
+  \          torch.nn.ReLU(),\n          torch.nn.Linear(kwargs_genmodel['dict_varname_to_dim']['z']//2,\
+  \ 1, bias=False),\n          torch.nn.Tanh()\n      ) for _ in range(list_slice.list_slice[0]._global_num_Batch)\n\
+  \  ],\n  num_batches=kwargs_genmodel['dict_varname_to_dim']['BatchEmb']\n)\n"
+module_predictor_xbarspl2notBatchID: "PredictorBatchID(\n  list_modules=[\n      torch.nn.Sequential(\n\
+  \          torch.nn.Linear(kwargs_genmodel['dict_varname_to_dim']['z'], kwargs_genmodel['dict_varname_to_dim']['z']//2),\n\
+  \          torch.nn.LayerNorm(kwargs_genmodel['dict_varname_to_dim']['z']//2),\n\
+  \          torch.nn.ReLU(),\n          torch.nn.Linear(kwargs_genmodel['dict_varname_to_dim']['z']//2,\
+  \ kwargs_genmodel['dict_varname_to_dim']['z']//2),\n          torch.nn.LayerNorm(kwargs_genmodel['dict_varname_to_dim']['z']//2),\n\
+  \          torch.nn.ReLU(),\n          torch.nn.Linear(kwargs_genmodel['dict_varname_to_dim']['z']//2,\
+  \ kwargs_genmodel['dict_varname_to_dim']['z']//2),\n          torch.nn.LayerNorm(kwargs_genmodel['dict_varname_to_dim']['z']//2),\n\
+  \          torch.nn.ReLU(),\n          torch.nn.Linear(kwargs_genmodel['dict_varname_to_dim']['z']//2,\
+  \ 1, bias=False),\n          torch.nn.Tanh()\n      ) for _ in range(list_slice.list_slice[0]._global_num_Batch)\n\
+  \  ],\n  num_batches=kwargs_genmodel['dict_varname_to_dim']['BatchEmb']\n)\n"
+coef_loss_CTpredfromZ: 100.0
+module_classifier_P1loss: "torch.nn.Sequential(\n      torch.nn.Linear(kwargs_genmodel['dict_varname_to_dim']['z'],\
+  \ kwargs_genmodel['dict_varname_to_dim']['z']//2),\n      torch.nn.ReLU(),\n   \
+  \   torch.nn.Linear(kwargs_genmodel['dict_varname_to_dim']['z']//2, list_slice.list_slice[0]._global_num_CT)\n\
+  )\n"
+coef_loss_NCCpredfromSin: 1.0
+module_predictor_P3loss: "torch.nn.Sequential(\n      torch.nn.Linear(kwargs_genmodel['dict_varname_to_dim']['s'],\
+  \ kwargs_genmodel['dict_varname_to_dim']['s']//2),\n      torch.nn.ReLU(),\n   \
+  \   torch.nn.Linear(kwargs_genmodel['dict_varname_to_dim']['s']//2, list_slice.list_slice[0]._global_num_CT)\n\
+  )\n"
+str_modeP3loss_regorcls: reg
+anneal_logp_ZSout_coef_min: 1.0
+anneal_logp_ZSout_coef_max: 1.0
+anneal_logp_ZSout_num_cycles: '0'
+anneal_logp_ZSout_numepochs_in_cycle: 50
+weight_logprob_zinbpos: 10.0
+weight_logprob_zinbzero: 1.0
+flag_drop_loss_logQdisentangler: 'True'
+coef_xbarintCT_loss: 1.0
+module_classifier_xbarintCT: "torch.nn.Sequential(\n      torch.nn.Linear(kwargs_genmodel['dict_varname_to_dim']['z'],\
+  \ kwargs_genmodel['dict_varname_to_dim']['z']//2),\n      torch.nn.ReLU(),\n   \
+  \   torch.nn.Linear(kwargs_genmodel['dict_varname_to_dim']['z']//2, list_slice.list_slice[0]._global_num_CT)\n\
+  )\n"
+coef_xbarsplNCC_loss: 1.0
+module_predictor_xbarsplNCC: "torch.nn.Sequential(\n      torch.nn.Linear(kwargs_genmodel['dict_varname_to_dim']['s'],\
+  \ kwargs_genmodel['dict_varname_to_dim']['s']//2),\n      torch.nn.ReLU(),\n   \
+  \   torch.nn.Linear(kwargs_genmodel['dict_varname_to_dim']['s']//2, list_slice.list_slice[0]._global_num_CT)\n\
+  )\n"
+str_modexbarsplNCCloss_regorcls: reg
+coef_rankloss_xbarint: 0.0
+num_subsample_XYrankloss: 20
+coef_xbarint2notNCC_loss: 1.0
+str_modexbarint2notNCCloss_regorclsorwassdist: wassdist
+coef_z2notNCC_loss: 1.0
+coef_rankloss_Z: 0.0
+coef_xbarint2notbatchID_loss: 1.0
+coef_xbarspl2notbatchID_loss: 1.0
+coef_loss_closeness_zz: 100.0
+coef_loss_closeness_xbarintxbarint: 100.0
+coef_loss_closeness_xintxint: 100.0

@@ -1,0 +1,24 @@
+flag_use_GPU: 'True'
+val_scppnorm_total: 10000
+flag_enable_wandb: 'True'
+wandb_project_name: MintFlow
+wandb_run_name: Mintflow_inflammation3
+wandb_stepsize_log: 2
+lr_training: 0.001
+num_training_epochs: 20
+numiters_updateduals_seprately_perepoch: 2000
+batchsize_updateduals_seprately_perepoch: 100
+numsteps_accumgrad: 2
+num_updateseparate_afterGRLs: 20
+annealing_decoder_XintXspl_coef_min: 1.0e-05
+annealing_decoder_XintXspl_coef_max: 0.001
+annealing_decoder_XintXspl_fractionepochs_phase1: 0.5
+annealing_decoder_XintXspl_fractionepochs_phase2: 0.2
+sleeptime_gccollect_aftertraining: 120
+sleeptime_gccollect_dumpOnePred: 120
+flag_finaleval_enable_pertissue_violinplot: 'True'
+flag_finaleval_enable_alltissuecombined_eval: 'True'
+flag_finaleval_enable_alltissue_violinplot: 'True'
+flag_finaleval_createanndata_alltissuescombined: 'True'
+method_ODE_solver: dopri5
+

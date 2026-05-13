@@ -1,0 +1,415 @@
+list_tissue:
+  anndata1:
+    file: /nfs/team361/ls34/inflow/outputs/dataset1/tissue_section_forMintFlow_1.h5ad
+    obskey_cell_type: broad_celltypes
+    obskey_sliceid_to_checkUnique: TissueSectionID_for_MintFlow
+    obskey_x: x_centroid
+    obskey_y: y_centroid
+    obskey_biological_batch_key: batchID_for_MintFlow
+    config_neighbourhood_graph:
+      n_neighs: 10
+      set_diag: 'False'
+      delaunay: 'False'
+    config_dataloader_train:
+      num_neighbors: 5
+      width_window: 500
+      min_numpoints_ingrid: 10
+    config_sq_pl_spatial_scatter:
+      edges_width: 0.1
+      legend_fontsize: 5
+      figsize:
+      - 10
+      - 10
+      size: 10.0
+    batchsize_compute_NCC: 10
+  anndata2:
+    file: /nfs/team361/ls34/inflow/outputs/dataset1/tissue_section_forMintFlow_2.h5ad
+    obskey_cell_type: broad_celltypes
+    obskey_sliceid_to_checkUnique: TissueSectionID_for_MintFlow
+    obskey_x: x_centroid
+    obskey_y: y_centroid
+    obskey_biological_batch_key: batchID_for_MintFlow
+    config_neighbourhood_graph:
+      n_neighs: 10
+      set_diag: 'False'
+      delaunay: 'False'
+    config_dataloader_train:
+      num_neighbors: 5
+      width_window: 500
+      min_numpoints_ingrid: 10
+    config_sq_pl_spatial_scatter:
+      edges_width: 0.1
+      legend_fontsize: 5
+      figsize:
+      - 10
+      - 10
+      size: 10.0
+    batchsize_compute_NCC: 10
+  anndata3:
+    file: /nfs/team361/ls34/inflow/outputs/dataset1/tissue_section_forMintFlow_3.h5ad
+    obskey_cell_type: broad_celltypes
+    obskey_sliceid_to_checkUnique: TissueSectionID_for_MintFlow
+    obskey_x: x_centroid
+    obskey_y: y_centroid
+    obskey_biological_batch_key: batchID_for_MintFlow
+    config_neighbourhood_graph:
+      n_neighs: 10
+      set_diag: 'False'
+      delaunay: 'False'
+    config_dataloader_train:
+      num_neighbors: 5
+      width_window: 500
+      min_numpoints_ingrid: 10
+    config_sq_pl_spatial_scatter:
+      edges_width: 0.1
+      legend_fontsize: 5
+      figsize:
+      - 10
+      - 10
+      size: 10.0
+    batchsize_compute_NCC: 10
+  anndata4:
+    file: /nfs/team361/ls34/inflow/outputs/dataset1/tissue_section_forMintFlow_4.h5ad
+    obskey_cell_type: broad_celltypes
+    obskey_sliceid_to_checkUnique: TissueSectionID_for_MintFlow
+    obskey_x: x_centroid
+    obskey_y: y_centroid
+    obskey_biological_batch_key: batchID_for_MintFlow
+    config_neighbourhood_graph:
+      n_neighs: 10
+      set_diag: 'False'
+      delaunay: 'False'
+    config_dataloader_train:
+      num_neighbors: 5
+      width_window: 500
+      min_numpoints_ingrid: 10
+    config_sq_pl_spatial_scatter:
+      edges_width: 0.1
+      legend_fontsize: 5
+      figsize:
+      - 10
+      - 10
+      size: 10.0
+    batchsize_compute_NCC: 10
+  anndata5:
+    file: /nfs/team361/ls34/inflow/outputs/dataset1/tissue_section_forMintFlow_5.h5ad
+    obskey_cell_type: broad_celltypes
+    obskey_sliceid_to_checkUnique: TissueSectionID_for_MintFlow
+    obskey_x: x_centroid
+    obskey_y: y_centroid
+    obskey_biological_batch_key: batchID_for_MintFlow
+    config_neighbourhood_graph:
+      n_neighs: 10
+      set_diag: 'False'
+      delaunay: 'False'
+    config_dataloader_train:
+      num_neighbors: 5
+      width_window: 500
+      min_numpoints_ingrid: 10
+    config_sq_pl_spatial_scatter:
+      edges_width: 0.1
+      legend_fontsize: 5
+      figsize:
+      - 10
+      - 10
+      size: 10.0
+    batchsize_compute_NCC: 10
+  anndata6:
+    file: /nfs/team361/ls34/inflow/outputs/dataset1/tissue_section_forMintFlow_6.h5ad
+    obskey_cell_type: broad_celltypes
+    obskey_sliceid_to_checkUnique: TissueSectionID_for_MintFlow
+    obskey_x: x_centroid
+    obskey_y: y_centroid
+    obskey_biological_batch_key: batchID_for_MintFlow
+    config_neighbourhood_graph:
+      n_neighs: 10
+      set_diag: 'False'
+      delaunay: 'False'
+    config_dataloader_train:
+      num_neighbors: 5
+      width_window: 500
+      min_numpoints_ingrid: 10
+    config_sq_pl_spatial_scatter:
+      edges_width: 0.1
+      legend_fontsize: 5
+      figsize:
+      - 10
+      - 10
+      size: 10.0
+    batchsize_compute_NCC: 10
+  anndata7:
+    file: /nfs/team361/ls34/inflow/outputs/dataset1/tissue_section_forMintFlow_7.h5ad
+    obskey_cell_type: broad_celltypes
+    obskey_sliceid_to_checkUnique: TissueSectionID_for_MintFlow
+    obskey_x: x_centroid
+    obskey_y: y_centroid
+    obskey_biological_batch_key: batchID_for_MintFlow
+    config_neighbourhood_graph:
+      n_neighs: 10
+      set_diag: 'False'
+      delaunay: 'False'
+    config_dataloader_train:
+      num_neighbors: 5
+      width_window: 500
+      min_numpoints_ingrid: 10
+    config_sq_pl_spatial_scatter:
+      edges_width: 0.1
+      legend_fontsize: 5
+      figsize:
+      - 10
+      - 10
+      size: 10.0
+    batchsize_compute_NCC: 10
+  anndata8:
+    file: /nfs/team361/ls34/inflow/outputs/dataset1/tissue_section_forMintFlow_8.h5ad
+    obskey_cell_type: broad_celltypes
+    obskey_sliceid_to_checkUnique: TissueSectionID_for_MintFlow
+    obskey_x: x_centroid
+    obskey_y: y_centroid
+    obskey_biological_batch_key: batchID_for_MintFlow
+    config_neighbourhood_graph:
+      n_neighs: 10
+      set_diag: 'False'
+      delaunay: 'False'
+    config_dataloader_train:
+      num_neighbors: 5
+      width_window: 500
+      min_numpoints_ingrid: 10
+    config_sq_pl_spatial_scatter:
+      edges_width: 0.1
+      legend_fontsize: 5
+      figsize:
+      - 10
+      - 10
+      size: 10.0
+    batchsize_compute_NCC: 10
+  anndata9:
+    file: /nfs/team361/ls34/inflow/outputs/dataset1/tissue_section_forMintFlow_9.h5ad
+    obskey_cell_type: broad_celltypes
+    obskey_sliceid_to_checkUnique: TissueSectionID_for_MintFlow
+    obskey_x: x_centroid
+    obskey_y: y_centroid
+    obskey_biological_batch_key: batchID_for_MintFlow
+    config_neighbourhood_graph:
+      n_neighs: 10
+      set_diag: 'False'
+      delaunay: 'False'
+    config_dataloader_train:
+      num_neighbors: 5
+      width_window: 500
+      min_numpoints_ingrid: 10
+    config_sq_pl_spatial_scatter:
+      edges_width: 0.1
+      legend_fontsize: 5
+      figsize:
+      - 10
+      - 10
+      size: 10.0
+    batchsize_compute_NCC: 10
+  anndata10:
+    file: /nfs/team361/ls34/inflow/outputs/dataset1/tissue_section_forMintFlow_10.h5ad
+    obskey_cell_type: broad_celltypes
+    obskey_sliceid_to_checkUnique: TissueSectionID_for_MintFlow
+    obskey_x: x_centroid
+    obskey_y: y_centroid
+    obskey_biological_batch_key: batchID_for_MintFlow
+    config_neighbourhood_graph:
+      n_neighs: 10
+      set_diag: 'False'
+      delaunay: 'False'
+    config_dataloader_train:
+      num_neighbors: 5
+      width_window: 500
+      min_numpoints_ingrid: 10
+    config_sq_pl_spatial_scatter:
+      edges_width: 0.1
+      legend_fontsize: 5
+      figsize:
+      - 10
+      - 10
+      size: 10.0
+    batchsize_compute_NCC: 10
+  anndata11:
+    file: /nfs/team361/ls34/inflow/outputs/dataset1/tissue_section_forMintFlow_11.h5ad
+    obskey_cell_type: broad_celltypes
+    obskey_sliceid_to_checkUnique: TissueSectionID_for_MintFlow
+    obskey_x: x_centroid
+    obskey_y: y_centroid
+    obskey_biological_batch_key: batchID_for_MintFlow
+    config_neighbourhood_graph:
+      n_neighs: 10
+      set_diag: 'False'
+      delaunay: 'False'
+    config_dataloader_train:
+      num_neighbors: 5
+      width_window: 500
+      min_numpoints_ingrid: 10
+    config_sq_pl_spatial_scatter:
+      edges_width: 0.1
+      legend_fontsize: 5
+      figsize:
+      - 10
+      - 10
+      size: 10.0
+    batchsize_compute_NCC: 10
+  anndata12:
+    file: /nfs/team361/ls34/inflow/outputs/dataset1/tissue_section_forMintFlow_12.h5ad
+    obskey_cell_type: broad_celltypes
+    obskey_sliceid_to_checkUnique: TissueSectionID_for_MintFlow
+    obskey_x: x_centroid
+    obskey_y: y_centroid
+    obskey_biological_batch_key: batchID_for_MintFlow
+    config_neighbourhood_graph:
+      n_neighs: 10
+      set_diag: 'False'
+      delaunay: 'False'
+    config_dataloader_train:
+      num_neighbors: 5
+      width_window: 500
+      min_numpoints_ingrid: 10
+    config_sq_pl_spatial_scatter:
+      edges_width: 0.1
+      legend_fontsize: 5
+      figsize:
+      - 10
+      - 10
+      size: 10.0
+    batchsize_compute_NCC: 10
+  anndata13:
+    file: /nfs/team361/ls34/inflow/outputs/dataset1/tissue_section_forMintFlow_13.h5ad
+    obskey_cell_type: broad_celltypes
+    obskey_sliceid_to_checkUnique: TissueSectionID_for_MintFlow
+    obskey_x: x_centroid
+    obskey_y: y_centroid
+    obskey_biological_batch_key: batchID_for_MintFlow
+    config_neighbourhood_graph:
+      n_neighs: 10
+      set_diag: 'False'
+      delaunay: 'False'
+    config_dataloader_train:
+      num_neighbors: 5
+      width_window: 500
+      min_numpoints_ingrid: 10
+    config_sq_pl_spatial_scatter:
+      edges_width: 0.1
+      legend_fontsize: 5
+      figsize:
+      - 10
+      - 10
+      size: 10.0
+    batchsize_compute_NCC: 10
+  anndata14:
+    file: /nfs/team361/ls34/inflow/outputs/dataset1/tissue_section_forMintFlow_14.h5ad
+    obskey_cell_type: broad_celltypes
+    obskey_sliceid_to_checkUnique: TissueSectionID_for_MintFlow
+    obskey_x: x_centroid
+    obskey_y: y_centroid
+    obskey_biological_batch_key: batchID_for_MintFlow
+    config_neighbourhood_graph:
+      n_neighs: 10
+      set_diag: 'False'
+      delaunay: 'False'
+    config_dataloader_train:
+      num_neighbors: 5
+      width_window: 500
+      min_numpoints_ingrid: 10
+    config_sq_pl_spatial_scatter:
+      edges_width: 0.1
+      legend_fontsize: 5
+      figsize:
+      - 10
+      - 10
+      size: 10.0
+    batchsize_compute_NCC: 10
+  anndata15:
+    file: /nfs/team361/ls34/inflow/outputs/dataset1/tissue_section_forMintFlow_15.h5ad
+    obskey_cell_type: broad_celltypes
+    obskey_sliceid_to_checkUnique: TissueSectionID_for_MintFlow
+    obskey_x: x_centroid
+    obskey_y: y_centroid
+    obskey_biological_batch_key: batchID_for_MintFlow
+    config_neighbourhood_graph:
+      n_neighs: 10
+      set_diag: 'False'
+      delaunay: 'False'
+    config_dataloader_train:
+      num_neighbors: 5
+      width_window: 500
+      min_numpoints_ingrid: 10
+    config_sq_pl_spatial_scatter:
+      edges_width: 0.1
+      legend_fontsize: 5
+      figsize:
+      - 10
+      - 10
+      size: 10.0
+    batchsize_compute_NCC: 10
+  anndata16:
+    file: /nfs/team361/ls34/inflow/outputs/dataset1/tissue_section_forMintFlow_16.h5ad
+    obskey_cell_type: broad_celltypes
+    obskey_sliceid_to_checkUnique: TissueSectionID_for_MintFlow
+    obskey_x: x_centroid
+    obskey_y: y_centroid
+    obskey_biological_batch_key: batchID_for_MintFlow
+    config_neighbourhood_graph:
+      n_neighs: 10
+      set_diag: 'False'
+      delaunay: 'False'
+    config_dataloader_train:
+      num_neighbors: 5
+      width_window: 500
+      min_numpoints_ingrid: 10
+    config_sq_pl_spatial_scatter:
+      edges_width: 0.1
+      legend_fontsize: 5
+      figsize:
+      - 10
+      - 10
+      size: 10.0
+    batchsize_compute_NCC: 10
+  anndata17:
+    file: /nfs/team361/ls34/inflow/outputs/dataset1/tissue_section_forMintFlow_17.h5ad
+    obskey_cell_type: broad_celltypes
+    obskey_sliceid_to_checkUnique: TissueSectionID_for_MintFlow
+    obskey_x: x_centroid
+    obskey_y: y_centroid
+    obskey_biological_batch_key: batchID_for_MintFlow
+    config_neighbourhood_graph:
+      n_neighs: 10
+      set_diag: 'False'
+      delaunay: 'False'
+    config_dataloader_train:
+      num_neighbors: 5
+      width_window: 500
+      min_numpoints_ingrid: 10
+    config_sq_pl_spatial_scatter:
+      edges_width: 0.1
+      legend_fontsize: 5
+      figsize:
+      - 10
+      - 10
+      size: 10.0
+    batchsize_compute_NCC: 10
+  anndata18:
+    file: /nfs/team361/ls34/inflow/outputs/dataset1/tissue_section_forMintFlow_18.h5ad
+    obskey_cell_type: broad_celltypes
+    obskey_sliceid_to_checkUnique: TissueSectionID_for_MintFlow
+    obskey_x: x_centroid
+    obskey_y: y_centroid
+    obskey_biological_batch_key: batchID_for_MintFlow
+    config_neighbourhood_graph:
+      n_neighs: 10
+      set_diag: 'False'
+      delaunay: 'False'
+    config_dataloader_train:
+      num_neighbors: 5
+      width_window: 500
+      min_numpoints_ingrid: 10
+    config_sq_pl_spatial_scatter:
+      edges_width: 0.1
+      legend_fontsize: 5
+      figsize:
+      - 10
+      - 10
+      size: 10.0
+    batchsize_compute_NCC: 10
