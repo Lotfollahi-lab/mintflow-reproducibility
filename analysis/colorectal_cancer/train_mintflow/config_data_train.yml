@@ -1,0 +1,22 @@
+- batchsize_compute_NCC: 10
+  config_dataloader_train:
+    min_numpoints_ingrid: 10
+    num_neighbors: 5
+    width_window: 12
+  config_neighbourhood_graph:
+    delaunay: 'True'
+    n_neighs: 10
+    set_diag: 'False'
+  config_sq_pl_spatial_scatter:
+    edges_width: 0.1
+    figsize:
+    - 10
+    - 10
+    legend_fontsize: 5
+    size: 10.0
+  file: /nfs/team361/ms83/data/CRC/visiumHD_mintflow/raw_data/adata_sc_P5_rawformintflow_7K_svg.h5ad
+  obskey_biological_batch_key: patient
+  obskey_cell_type: DeconvolutionLabel2
+  obskey_sliceid_to_checkUnique: tissue
+  obskey_x: X
+  obskey_y: Y
