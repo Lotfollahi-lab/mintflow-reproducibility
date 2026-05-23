@@ -49,12 +49,15 @@ RANDOM_SEED = BASE_RANDOM_SEED + RUN_INDEX - 1
 MODEL_CHECKPOINT = Path(
     '/nfs/team361/am74/mintflow/revision/train_model_all_data/window_sz_2280_alldatawithbatcheffect/8epochs_save_h5ad/new_hyperparametes/run2/outputs/model_epoch_7.pt'
 )
-CACHE_PATH = Path('/lustre/scratch126/cellgen/lotfollahi/zh4/Mintflow/cache/mintflow_context.pkl')
 MACROPHAGE_REFERENCE_PATH = Path('/nfs/team361/cl35/Macs/adata_macrophages.h5ad')
 TCELL_REFERENCE_PATH = Path('/nfs/team361/cl35/Tcells/adata_lymphocyte_annotated.h5ad')
 PATH_CROPPED = Path(
     '/lustre/scratch126/cellgen/lotfollahi/zh4/Mintflow/Subclustering_analysis/adata_TLS_cropped_combined'
 )
+PATH_ANNDATA = Path(
+    '/lustre/scratch126/cellgen/lotfollahi/zh4/Mintflow/Subclustering_analysis/adata_raw_per_section'
+)
+NUM_TRAINING_EPOCHS = 8
 
 TARGET_SECTIONS = [
     'CV1-KID-0-FT-2',
@@ -173,6 +176,97 @@ def collect_memory():
     gc.collect()
     if torch.cuda.is_available():
         torch.cuda.empty_cache()
+
+
+def _mintflow_bool_to_str(x):
+    if isinstance(x, dict):
+        for k, v in x.items():
+            if isinstance(v, bool):
+                x[k] = "True" if v else "False"
+            else:
+                _mintflow_bool_to_str(v)
+    elif isinstance(x, list):
+        for i, v in enumerate(x):
+            if isinstance(v, bool):
+                x[i] = "True" if v else "False"
+            else:
+                _mintflow_bool_to_str(v)
+
+
+def build_mintflow_context(path_anndata, num_training_epochs=8):
+    files = sorted([f for f in os.listdir(path_anndata) if f.endswith('.h5ad')])
+    if not files:
+        raise FileNotFoundError(f'No .h5ad files found in: {path_anndata}')
+
+    num_sections = len(files)
+    config_data_train, config_data_evaluation, config_model, config_training = (
+        mintflow.get_default_configurations(
+            num_tissue_sections_training=num_sections,
+            num_tissue_sections_evaluation=num_sections,
+        )
+    )
+
+    for idx, filename in enumerate(files, start=1):
+        key = f'anndata{idx}'
+        filepath = os.path.join(path_anndata, filename)
+
+        config_data_train['list_tissue'][key]['file'] = filepath
+        config_data_train['list_tissue'][key]['obskey_cell_type'] = 'level_3_cell_type'
+        config_data_train['list_tissue'][key]['obskey_sliceid_to_checkUnique'] = 'donor'
+        config_data_train['list_tissue'][key]['obskey_x'] = 'x_centroid'
+        config_data_train['list_tissue'][key]['obskey_y'] = 'y_centroid'
+        config_data_train['list_tissue'][key]['obskey_biological_batch_key'] = 'batch'
+        config_data_train['list_tissue'][key]['config_dataloader_train']['width_window'] = 1368
+        config_data_train['list_tissue'][key]['config_neighbourhood_graph'] = {
+            'n_neighs': 10,
+            'set_diag': 'False',
+            'delaunay': 'False',
+        }
+
+        config_data_evaluation['list_tissue'][key]['file'] = filepath
+        config_data_evaluation['list_tissue'][key]['obskey_cell_type'] = 'level_3_cell_type'
+        config_data_evaluation['list_tissue'][key]['obskey_sliceid_to_checkUnique'] = 'donor'
+        config_data_evaluation['list_tissue'][key]['obskey_x'] = 'x_centroid'
+        config_data_evaluation['list_tissue'][key]['obskey_y'] = 'y_centroid'
+        config_data_evaluation['list_tissue'][key]['obskey_biological_batch_key'] = 'batch'
+        config_data_evaluation['list_tissue'][key]['config_dataloader_test']['width_window'] = 1368
+        config_data_evaluation['list_tissue'][key]['config_neighbourhood_graph'] = {
+            'n_neighs': 10,
+            'set_diag': 'False',
+            'delaunay': 'False',
+        }
+
+    config_model['coef_xbarint2notbatchID_loss'] = 1.0
+    config_model['coef_xbarspl2notbatchID_loss'] = 1.0
+    config_model['coef_flowmatchingloss'] = 0.0
+    config_model['dict_qname_to_scaleandunweighted'] = (
+        'impanddisentgl_int#0.1#True&impanddisentgl_spl#0.0#True'
+        '&varphi_enc_int#0.0#True&varphi_enc_spl#0.0#True'
+        '&z#0.0#True&sin#0.0#True&sout#0.0#True'
+    )
+    config_model['coef_loss_CTpredfromZ'] = 100
+
+    config_training['num_training_epochs'] = num_training_epochs
+    config_training['flag_use_GPU'] = 'True'
+    config_training['flag_enable_wandb'] = 'False'
+    config_training['annealing_decoder_XintXspl_coef_max'] = 0.01
+
+    config_data_train = mintflow.verify_and_postprocess_config_data_train(config_data_train)
+    config_data_evaluation = mintflow.verify_and_postprocess_config_data_evaluation(config_data_evaluation)
+    config_model = mintflow.verify_and_postprocess_config_model(
+        config_model, num_tissue_sections=len(config_data_train)
+    )
+    config_training = mintflow.verify_and_postprocess_config_training(config_training)
+
+    dict_all4_configs = {
+        'config_data_train': config_data_train,
+        'config_data_evaluation': config_data_evaluation,
+        'config_model': config_model,
+        'config_training': config_training,
+    }
+    _mintflow_bool_to_str(dict_all4_configs)
+    data_mintflow = mintflow.setup_data(dict_all4_configs=dict_all4_configs)
+    return data_mintflow, dict_all4_configs
 
 
 @anndata_registry._REGISTRY.register_read(H5Array, IOSpec('null', '0.1.0'))
@@ -711,9 +805,10 @@ def main():
     model.to(device)
     print(f'Loaded checkpoint: {MODEL_CHECKPOINT}')
 
-    with open(CACHE_PATH, 'rb') as handle:
-        data_mintflow, dict_all4_configs = pickle.load(handle)
-    print(f'Loaded cached context: {CACHE_PATH}')
+    data_mintflow, dict_all4_configs = build_mintflow_context(
+        PATH_ANNDATA, num_training_epochs=NUM_TRAINING_EPOCHS
+    )
+    print(f'Built MintFlow context from: {PATH_ANNDATA}')
 
     ref_level4 = load_tcell_level4_reference()
     target_keys, target_df = load_ifn_macrophage_targets()
