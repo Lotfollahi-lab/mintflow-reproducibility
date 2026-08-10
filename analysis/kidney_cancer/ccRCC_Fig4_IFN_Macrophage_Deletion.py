@@ -322,11 +322,16 @@ def mean_generated_expression(result_gen, expression_key='MintFLow_Generated_Xmi
 
 
 def build_generated_expression_adata(adata):
-    if 'MintFLow_Generated_Xmic' not in adata.obsm:
-        raise KeyError("Missing `obsm['MintFLow_Generated_Xmic']` in saved adata.")
+    for key in ('MintFlow_Generated_Xint', 'MintFLow_Generated_Xmic'):
+        if key not in adata.obsm:
+            raise KeyError(f"Missing `obsm[{key!r}]` in saved adata.")
 
+    # total generated expression = intrinsic (Xint) + microenvironment (Xmic)
     score_adata = sc.AnnData(
-        X=np.asarray(adata.obsm['MintFLow_Generated_Xmic'], dtype=np.float64),
+        X=(
+            np.asarray(adata.obsm['MintFlow_Generated_Xint'], dtype=np.float64)
+            + np.asarray(adata.obsm['MintFLow_Generated_Xmic'], dtype=np.float64)
+        ),
         obs=adata.obs.copy(),
         var=adata.var.copy(),
     )
@@ -651,6 +656,10 @@ def generate_shared_unperturbed(section_names, shared_input_dir, shared_generate
             result_gen_orig,
             expression_key='MintFlow_Generated_Xint',
         )
+        adata_orig.obsm['MintFlow_Generated_Xint_plus_Xmic'] = (
+            np.asarray(adata_orig.obsm['MintFlow_Generated_Xint'], dtype=np.float64)
+            + np.asarray(adata_orig.obsm['MintFLow_Generated_Xmic'], dtype=np.float64)
+        )
         adata_orig.obsm['MintFLow_np_MCC'] = np.asarray(result_gen_orig['np_MCC'])
         save_adata(
             adata_orig,
@@ -702,6 +711,10 @@ def generate_mode_outputs(section_names, mode_name, mode_dir, shared_generated_d
         adata_pert.obsm['MintFlow_Generated_Xint'] = mean_generated_expression(
             result_gen_pert,
             expression_key='MintFlow_Generated_Xint',
+        )
+        adata_pert.obsm['MintFlow_Generated_Xint_plus_Xmic'] = (
+            np.asarray(adata_pert.obsm['MintFlow_Generated_Xint'], dtype=np.float64)
+            + np.asarray(adata_pert.obsm['MintFLow_Generated_Xmic'], dtype=np.float64)
         )
         adata_pert.obsm['MintFLow_np_MCC'] = np.asarray(result_gen_pert['np_MCC'])
         adata_perturbed_path = mode_dir['generated_adatas'] / f'{safe_name(section_name)}__perturbed.h5ad'
