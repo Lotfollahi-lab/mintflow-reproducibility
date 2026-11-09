@@ -1,0 +1,16 @@
+cd /lustre/scratch124/cellgen/haniffa/users/ls34/mintflow/
+mkdir -p ./NonGit/
+chmod +x *.sh
+
+# dataset 1
+bsub -G team361 -q gpu-huge  -n7 -M100000 -R"select[mem>100000] rusage[mem=100000]" -gpu "mode=shared:j_exclusive=no:gmem=10000:num=1" -J "MntJ1" -e /lustre/scratch124/cellgen/haniffa/users/ls34/mintflow_findvariables1.%J.err  -o /lustre/scratch124/cellgen/haniffa/users/ls34/mintflow_findvariables1.%J.out bash /nfs/users/nfs_l/ls34/inflow_notebooks/run_mintflow_v2/run_all1.sh
+
+# dataset 1
+
+bsub -G team361 -q gpu-huge  -n7 -M100000 -R"select[mem>100000] rusage[mem=100000]" -gpu "mode=shared:j_exclusive=no:gmem=10000:num=1" -J "MntJ_dataset2" -e /lustre/scratch124/cellgen/haniffa/users/ls34/mintflow_findvariables2.%J.err  -o /lustre/scratch124/cellgen/haniffa/users/ls34/mintflow_findvariables2.%J.out bash /nfs/users/nfs_l/ls34/inflow_notebooks/run_mintflow_v2/run_all2.sh
+ 
+ 
+# test
+bsub -G team361 -q gpu-normal  -n7 -M100000 -R"select[mem>100000] rusage[mem=100000]" -gpu "mode=shared:j_exclusive=no:gmem=10000:num=1" -J "Mnt_test" -e /lustre/scratch124/cellgen/haniffa/users/ls34/mintflow_findvariables2.%J.err  -o /lustre/scratch124/cellgen/haniffa/users/ls34/mintflow_findvariables2.%J.out bash /nfs/users/nfs_l/ls34/inflow_notebooks/run_mintflow_v2/run1_1.sh
+ 
+ 
