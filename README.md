@@ -2,7 +2,6 @@
 
 This repository contains the code to reproduce the analyses and benchmarking experiments performed in the MintFlow [manuscript](https://www.biorxiv.org/content/10.1101/2025.06.24.661094v1). The MintFlow source code can be found [here](https://github.com/Lotfollahi-lab/mintflow).
 
-This structure is designed for reviewer readability and to enable co-authors to contribute their analyses. See [CONTRIBUTING.md](CONTRIBUTING.md) for how to add your analysis.
 
 ## Repository Structure
 
@@ -51,22 +50,6 @@ mintflow-reproducibility/
 
 The kidney cancer survival analysis (`Fig6&S14_MintFlow_RCCanalysis_TGCASurvival.R`) requires R. Install R and the required packages as indicated in the script.
 
-## Data & Model Weights
-
-The list of all data files (`.h5ad`) and model weights (`.pkl`) required for each notebook is available in our **[Data & Weights Registry (Google Sheet)](https://docs.google.com/spreadsheets/d/1MZ575oXGSmGBPvi-qBCIgjDxeWn2tQmCxVbO9LWlhNs/edit?usp=sharing)**.
-
-To reproduce a specific notebook, find its row in the sheet, download the listed files, and set the paths at the top of the notebook. See [`datasets/README.md`](datasets/README.md) for details and [REPRODUCIBILITY.md](REPRODUCIBILITY.md) for access policies.
-
-## Contributing Your Analysis
-
-We welcome contributions from co-authors. **Where to add your analysis:**
-
-| Add your analysis here | Example |
-|------------------------|---------|
-| `analysis/<your_folder>/` | `analysis/figure5_application/` or `analysis/breast_cancer/` | 
-| Add a `README.md` inside your folder | Describes files and data requirements |
-
-See [CONTRIBUTING.md](CONTRIBUTING.md) for the full guide (naming, paths, checklist).
 
 ## Reference
 
